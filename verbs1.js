@@ -1,5 +1,5 @@
 function verbs1(){
-  window.location.href="/verbs.html";
+  window.location.href="/index.html";
 }
 
 function prepositions() {
