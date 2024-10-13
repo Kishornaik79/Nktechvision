@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+.document-list {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 0;
+}
+
+.document-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.9);
+    margin-bottom: 10px;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.document-icon {
+    background-image: url('icon-url.png'); /* Placeholder for document icon */
+    background-size: contain;
+    width: 25px;
+    height: 25px;
+}
+
+.orange {
+    background-color: #FF9800;
+}
+
+.blue {
+    background-color: #2196F3;
+}
+
+.purple {
+    background-color: #9C27B0;
+}
+
+.red {
+    background-color: #F44336;
+}
+
+.document-info {
+    flex-grow: 1;
+    margin-left: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.view-btn {
+    background-color:#1976D2;
+    color: #fff;
+    border: none;
+    padding: 7px 7px 7px 7px;
+    border-radius:4px; 
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    transition: background-color 0.1s ease;
+}
+
+.view-btn:hover {
+    background-color:green;
+   /* animation: zoomInOut 1s infinite;*/
+    
+}
+.document-icon{
+  text-align: center;
+  color: #fff;
+  background-color:deeppink;
+}
+.document-icon{
+  border: solid black 1px;
+  border-radius:15px;
+  
+}
+ /*@keyframes colorChange {
+            0% { color: black; }
+            25% { color: yellow; }
+            50% { color: green; }
+            75% { color: white; }
+            100% { color: red; }
+        }
+        .document-icon{
+            font-weight: bold;
+            animation: colorChange 1s infinite;
+        }
+            @keyframes zoomInOut{
+
+      0%,
+      100% {
+        transform: scale(0.50);
+      }
+
+      50% {
+        transform: scale(1);
+      }
+    }
+
+    .document-info{
+      animation: zoomInOut 3s infinite;
+    }*/
