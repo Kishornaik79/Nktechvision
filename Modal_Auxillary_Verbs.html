@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modal Auxiliary Verbs</title>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: deeppink;
+}
+
+.verb-card {
+  margin: 20px 0;
+  padding: 15px;
+  background: wheat;
+  border-left: 5px solid deeppink;
+  border-radius: 5px;
+  
+}
+
+.verb-card h2 {
+  margin: 0;
+  color: deeppink;
+}
+
+.verb-card p {
+  margin: 5px 0;
+  
+}
+
+.example {
+  font-style: italic;
+  color: #555;
+  
+}
+.use{
+  font-style: italic;
+  color: #555;
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Modal Auxiliary Verbs</h1>
+    <div id="verbs-container"></div>
+  </div>
+  <script>
+    const verbs = [
+  {
+    
+    verb: "Can",
+    use: "ability or possibility",
+    meaning: "सकना",
+    example: "I can swim.",
+    exampleHindi: "मैं तैर सकता हूँ।"
+  },
+  {
+    verb: "Could",
+    use:"past ability, polite requests, or possibilities",
+    meaning: "सकता था / सकते थे",
+    example: "She could sing when she was young.",
+    exampleHindi: "वह जब छोटी थी तब गा सकती थी।"
+    
+  },
+  {
+    verb: "May",
+    use:"permission or possibility",
+    meaning: "सकता है / सकता हूँ",
+    example: "You may leave now.",
+    exampleHindi: "तुम अब जा सकते हो।"
+  },
+  {
+    verb: "Might",
+    use:"Indicates a lesser possibility than may",
+    meaning: "सकता है / शायद",
+    example: "It might rain today.",
+    exampleHindi: "आज शायद बारिश हो सकती है।"
+  },
+  {
+    verb: "Will",
+    use:"Expresses future intention or certainty",
+    meaning: "करेगा",
+    example: "I will call you tomorrow.",
+    exampleHindi: "मैं तुम्हें कल फोन करूंगा।"
+  },
+  {
+    verb: "Would",
+    use:"Used for polite requests, hypothetical situations, or habitual actions in the past",
+    meaning: "करता / करता था",
+    example: "He would always help me.",
+    exampleHindi: "वह हमेशा मेरी मदद करता था।"
+  },
+  {
+    verb: "Shall",
+    use:"future intentions or formal suggestions",
+    meaning: "करेगा / करनी चाहिए",
+    example: "Shall we go to the park?",
+    exampleHindi: "क्या हम पार्क चलें?"
+  },
+  {
+    verb: "Should",
+    use:"Indicates obligation, advice, or expectation",
+    meaning: "चाहिए",
+    example: "You should study harder.",
+    exampleHindi: "तुम्हें और मेहनत से पढ़ाई करनी चाहिए।"
+  },
+  {
+    verb: "Must",
+    use:"Expresses strong obligation, necessity, or certainty",
+    meaning: "करना ही होगा / चाहिए",
+    example: "You must wear a helmet.",
+    exampleHindi: "तुम्हें हेलमेट पहनना ही होगा।"
+  },
+  {
+    verb: "Ought to",
+    use:"Similar to should but slightly formal",
+    meaning: "चाहिए",
+    example: "You ought to respect your elders.",
+    exampleHindi: "तुम्हें अपने बड़ों का सम्मान करना चाहिए।"
+  },
+  {
+    verb: "Need",
+    use:"Expresses necessity in questions or negatives",
+    meaning: "ज़रूरत",
+    example: "Need I complete this task today?",
+    exampleHindi: "क्या मुझे यह काम आज पूरा करना ज़रूरी है?"
+  },
+  {
+    verb: "Dare",
+    use:"Expresses boldness or challenge",
+    meaning: "साहस करना",
+    example: "How dare you talk to me like that?",
+    exampleHindi: "तुमने मुझसे ऐसे बात करने की हिम्मत कैसे की?"
+  }
+];
+
+const container = document.getElementById("verbs-container");
+
+verbs.forEach(verb => {
+  const card = document.createElement("div");
+  card.className = "verb-card";
+  card.innerHTML = `
+    <h2>${verb.verb}</h2>
+    <p><strong>Meaning:</strong> ${verb.meaning}</p>
+    <p><strong>Use:</strong> ${verb.use}</p>
+    <p><strong>Example:</strong> <span class="example">${verb.example}</span></p>
+    <p><strong>Hindi:</strong> <span class="example">${verb.exampleHindi}</span></p>
+  `;
+  container.appendChild(card);
+});
+  </script>
+</body>
+</html>
