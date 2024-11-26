@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interjections</title>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f8ff;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: deeppink;
+}
+
+.card {
+  margin: 15px 0;
+  padding: 15px;
+  background: pink;
+  border-left: 5px solid deeppink;
+  border-radius: 5px;
+}
+
+.card h2 {
+  margin: 0;
+  color: deeppink;
+}
+
+.card p {
+  margin: 5px 0;
+}
+
+.example {
+  font-style: italic;
+  color: #555;
+}
+.use {
+  font-style: italic;
+  color: #555;
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Interjections</h1>
+    <div id="interjections-container"></div>
+  </div>
+  <script>
+    const interjections = [
+  { word: "Ah", 
+  meaning: "आह!",
+  use:"संतोष या दर्द प्रकट करने के लिए", 
+  example: "Ah, this feels so relaxing!", exampleHindi: "आह, यह बहुत सुकूनभरा लग रहा है!" },
+  
+  { word: "Alas", 
+  meaning: "हाय!",
+  use:"दुख प्रकट करने के लिए",
+  example: "Alas, she missed her flight!", 
+  exampleHindi: "हाय, वह अपनी फ्लाइट से चूक गई!" },
+  
+  { word: "Bravo",
+  meaning: "शाबाश!",
+  use:"प्रशंसा प्रकट करने के लिए", 
+  example: "Bravo! That was an amazing performance.",
+  exampleHindi: "शाबाश! वह अद्भुत प्रदर्शन था।" },
+  
+  { word: "Hey",
+  meaning: "अरे!",
+  use:"ध्यान आकर्षित करने के लिए", 
+  example: "Hey, are you listening to me?",
+  exampleHindi: "अरे, क्या तुम मेरी बात सुन रहे हो?" },
+  
+  { word: "Oops", 
+  meaning: "अरे!",
+  use:"गलती होने पर",
+  example: "Oops! I spilled the coffee.", 
+  exampleHindi: "अरे! मैंने कॉफी गिरा दी।" },
+  
+  { word: "Wow",
+  meaning: "वाह!",
+  use:"आश्चर्य या प्रशंसा व्यक्त करने के लिए", example: "Wow! What a beautiful painting!",
+  exampleHindi: "वाह! कितनी सुंदर पेंटिंग है!" },
+  
+  { word: "Oh",
+  meaning: "ओह!",
+  use:"आश्चर्य, खुशी, या दुख प्रकट करने के लिए", example: "Oh! I didn’t expect to see you here.",
+  exampleHindi: "ओह! मैंने तुम्हें यहां देखने की उम्मीद नहीं की थी।" },
+  
+  { word: "Hush",
+  meaning: "चुप!",
+  use:"शांत रहने को कहने के लिए",
+  example: "Hush! The baby is sleeping.",
+  exampleHindi: "चुप! बच्चा सो रहा है।" },
+  { word: "Eww",
+  meaning: "छी!",
+  use:"घृणा व्यक्त करने के लिए", 
+  example: "Eww, this food smells terrible!", 
+  exampleHindi: "छी, इस खाने की गंध भयानक है!" },
+  
+  { word: "Yippee", 
+  meaning: "यिप्पी!", 
+  use:"खुशी प्रकट करने के लिए", 
+  example: "Yippee! We won the match!", exampleHindi: "यिप्पी! हम मैच जीत गए!" },
+  { word: "Shh", 
+  meaning: "श्श!", 
+  use:"शांति बनाए रखने के लिए", 
+  example: "Shh! Don’t make noise in the library.", 
+  exampleHindi: "श्श! लाइब्रेरी में शोर मत करो।" },
+  { word: "Phew", 
+  meaning: "उफ्फ!", 
+  use:"सुकून या राहत प्रकट करने के लिए", example: "Phew, I finally completed the project.", 
+  exampleHindi: "उफ्फ, मैंने आखिरकार प्रोजेक्ट पूरा कर लिया।" },
+  { word: "Ugh", 
+  meaning: "उफ्फ!", 
+  use:"निराशा या गुस्सा व्यक्त करने के लिए''", 
+  example: "Ugh, why does this always happen to me?", 
+  exampleHindi: "उफ्फ, यह हमेशा मेरे साथ क्यों होता है?" },
+  { word: "Hurrah", 
+  meaning: "हुर्रा!",
+  use:"खुशी या जीत के लिए", 
+  example: "Hurrah! We have succeeded.", exampleHindi: "हुर्रा! हम सफल हो गए हैं।" },
+  { word: "Oh no", 
+  meaning: "अरे नहीं!",
+  use:"चिंता या डर व्यक्त करने के लिए", 
+  example: "Oh no, I forgot my wallet!", exampleHindi: "अरे नहीं, मैं अपना बटुआ भूल गया!" },
+  { word: "Ouch", 
+  meaning: "ओuch!",
+  use:"दर्द प्रकट करने के लिए", 
+  example: "Ouch! That hurts a lot.", exampleHindi: "ओuch! यह बहुत दर्द देता है।" },
+  { word: "Well", 
+  meaning: "अच्छा!",
+  use:"शुरुआत या विचार व्यक्त करने के लिए", example: "Well, let me think about it.", exampleHindi: "अच्छा, मुझे इसके बारे में सोचने दो।" },
+  { word: "Hmm", 
+  meaning: "हम्म!",
+  use:"सोचने या सहमति के लिए", 
+  example: "Hmm, I agree with your idea.", exampleHindi: "हम्म, मैं तुम्हारे विचार से सहमत हूं।" },
+  { word: "Oh dear", 
+  meaning: "अरे बाप रे!",
+  use:"चिंता या परेशानी व्यक्त करने के लिए", example: "Oh dear, I lost my keys again!", exampleHindi: "अरे बाप रे, मैंने फिर से अपनी चाबियां खो दीं!" },
+  { word: "Aha", meaning: "आहा!",
+  use: "खोज या समझ प्रकट करने के लिए", example: "Aha! So that’s the solution!", 
+  exampleHindi: "आहा! तो यही समाधान है!" }
+];
+const container = document.getElementById("interjections-container");
+interjections.forEach(interjection => {
+  const card = document.createElement("div");
+  card.className = "card";
+  card.innerHTML = `
+    <h2>${interjection.word}</h2>
+    <p><strong>Meaning:</strong> ${interjection.meaning}</p>
+    <p><strong>Use:</strong> ${interjection.use}</p>
+    <p><strong>Example:</strong> <span class="example">${interjection.example}</span></p>
+    <p><strong>Hindi:</strong> <span class="example">${interjection.exampleHindi}</span></p>
+  `;
+  container.appendChild(card);
+});
+  </script>
+</body>
+</html>
