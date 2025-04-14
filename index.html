@@ -1,64 +1,436 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
-    <link rel="stylesheet" href="style.css">
-
-</head>
-<body>
-  
-    <!-- Navigation Bar -->
-    <header>
-        <nav class="navbar">
-            <div class="logo">
-             <span class="red">N</span>
-             <span class="red">k</span>
-             <span>T</span>
-             <span>e</span>
-             <span>c</span>
-             <span>h</span>
-             <span class="green">V</span>
-             <span class="green">i</span>
-             <span class="green">s</span>
-             <span class="green">i</span>
-             <span class="green">o</span>
-             <span class="green">n</span>
-            </div>
-            <ul class="nav-links">
-             <li><a href="index.html">Home</a></li>
-              <li><a href="About_Me.html">About</a></li>
-              <li><a href="contact us.html">Contact</a></li>
-            </ul>
-            <div class="hamburger-menu" onclick="toggleMenu()">
-                &#9776;
-            </div>
-        </nav>
-    </header>
-        <!--<p class="q">
-     "हम भी वक्त के जैसे हैं साहब, कदर न करने वालों को दुबारा नहीं मिलते...!"
-        </p>-->
-      <!--add here search bar-->
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-           <h1 class="animation"><!--Welcome to NkTechVision--></h1>
-           <a href="view.html" class="cta-btn"><span class="redo">L</span>EARN <span class="deeppink">E</span>NGLISH</a>
-        </div>
-    </section>
-
-    <!-- Main Content -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HomePage</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
     
+    .scroll-container {
+      display: flex;
+      align-items: center;
+      background-color: green;
+      padding: 10px 40px;
+    }
+    
+    
+    
+    /* Scrollable navbar */
+    .navbar {
+      display: flex;
+      overflow-x: auto;
+      white-space: nowrap;
+      scrollbar-width: none;
+      /* Hide scrollbar in Firefox */
+      -ms-overflow-style: none;
+      /* Hide scrollbar in IE/Edge */
+      width: 100%;
+      margin-top: 40px;
+      
+      
+    }
+    
+    /* Hide scrollbar for WebKit (Chrome/Safari) */
+    .navbar::-webkit-scrollbar {
+      display: none;
+    }
+    
+    /* Navbar items */
+    .navbar a {
+      padding: 15px 20px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 15px;
+      border: none;
+    }
+    
+    .menu-container {
+      width: 100%;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: -100%;
+      /* Hidden initially */
+      
+      transition: left 0.9s ease-in-out;
+      padding-top: 50px;
+      
+    }
+    
+    .menu-container a {
+      border: solid 0.1px black;
+      margin-bottom: 5px;
+      display: block;
+      padding: 15px;
+      color: #000;
+      font-weight: bolder;
+      text-decoration: none;
+      text-align: center;
+      background-color: white;
+      margin-top: -3px;
+      
+      
+    }
+    
+    .menu-container a:hover {
+      background-color: #575757;
+      color: white;
+    }
+    
+    .menu-button {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background-color: green;
+      color: white;
+      border: none;
+      padding: 10px 10px;
+      cursor: pointer;
+      font-size: 20px;
+      font-weight: bolder;
+      margin-top: 42px;
+    }
+    
+    .close-button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: none;
+      color: white;
+      font-size: 24px;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .close-button:hover {
+      background-color:
+    }
+    
+    .navbarr {
+      padding: 3px 5px;
+      color: white;
+      font-weight: bold;
+      text-align: center;
+      
+    }
+    
+    .logo {
+      text-align: center;
+      padding: 2px;
+      margin-top: 3px;
+      border-radius: 5px;
+      
+    }
+    
+    .bgcolor {
+      background-color: black;
+      margin-top: -111px;
+      padding: 10px;
+      30px;
+    }
+    
+    @keyframes blink {
+      0% {
+        opacity: 1;
+      }
+      
+      50% {
+        opacity: 0;
+      }
+      
+      100% {
+        opacity: 1;
+      }
+    }
+    
+    .animation {
+      font-size: 24px;
+      font-weight: bold;
+      color: deeppink;
+      animation: blink 3s infinite;
+    }
+    
+    .logo {
+      display: inline-block;
+    }
+    
+    .logo span {
+      display: inline-block;
+      font-weight: bold;
+      animation: wave 2s infinite;
+    }
+    
+    .logo span:nth-child(1) {
+      animation-delay: 0s;
+    }
+    
+    .logo span:nth-child(2) {
+      animation-delay: 0.1s;
+    }
+    
+    .logo span:nth-child(3) {
+      animation-delay: 0.2s;
+    }
+    
+    .logo span:nth-child(4) {
+      animation-delay: 0.3s;
+    }
+    
+    .logo span:nth-child(5) {
+      animation-delay: 0.4s;
+    }
+    
+    .logo span:nth-child(6) {
+      animation-delay: 0.5s;
+    }
+    
+    .logo span:nth-child(7) {
+      animation-delay: 0.6s;
+    }
+    
+    .logo span:nth-child(8) {
+      animation-delay: 0.7s;
+    }
+    
+    .logo span:nth-child(9) {
+      animation-delay: 0.8s;
+    }
+    
+    .logo span:nth-child(10) {
+      animation-delay: 0.9s;
+    }
+    
+    .logo span:nth-child(11) {
+      animation-delay: 0.8s;
+    }
+    
+    .logo span:nth-child(12) {
+      animation-delay: 0.9s;
+    }
+    
+    @keyframes wave {
+      
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+      
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+    
+    .red {
+      color: indianred;
+    }
+    
+    .green {
+      color: green;
+    }
+    
+    @keyframes blink {
+      0% {
+        opacity: 1;
+      }
+      
+      50% {
+        opacity: 0;
+      }
+      
+      100% {
+        opacity: 1;
+      }
+    }
+    
+    span.logo {
+      display: inline-block;
+    }
+    
+    a img {
+      height: 30px;
+      width: 30px;
+      padding: 3px;
+      margin: 0px;
+      border-radius: 40px;
+    }
+    
+    .md {
+      height: 300px;
+      width: 300px;
+      margin: auto;
+      background-color: whitesmoke;
+      box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.9);
+      margin-top: 100px;
+      margin-bottom: 30px;
+      border-radius: 10px;
+    }
+    
+    .md>div {
+      color: white;
+      text-align: center;
+    }
+    
+    img {
+      height: 50%;
+      width: 50%;
+      border-radius: 10px;
+      box-shadow:  0px 7px 5px 0px black; rgba(0, 0, 0, 0.9);
+      margin-top: -30px;
+    }
+    
+    h1 {
+      text-shadow: 2px 1px 3px black;
+    }
+    
+    .button {
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      padding: 10px;
+      border: none;
+      background-color: green;
+      color: white;
+      border-radius: 10px;
+      box-shadow: 0px 5px 2px 0px black;
+      rgba(0, 0, 0, 0.9);
+    }
+    
+    .button:hover {
+      background-color: white;
+      color: black;
+    }
+    
+    /* Footer */
+    footer {
+      padding: 5px;
+      text-align: center;
+      background-color: #333;
+      color: white;
+    }
+    
+    .footer-content p {
+      font-size: 10px;
+    }
+  </style>
+</head>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2024 NkTechVision. All rights reserved.</p>
-        </div>
-    </footer>
-
+<body>
+  <div class="scroll-container">
+    <!--<button class="scroll-btn" onclick="scrollLeft()"></button>!-->
+    <div class="navbar">
+      <a href="https://kishornaik79.github.io/Nktechvision/">ENGLISH</a>
+      <a href= "https://www.w3schools.com/html/default.asp">HTML</a>
+      
+      <a href="https://www.tpointtech.com/css-tutorial">CSS</a>
+      
+      <a href="https://javascript.info/intro">JavaScript</a>
+      
+      <a href="https://www.tpointtech.com/python-tutorial">PYTHON</a>
+      
+      <a href="https://www.w3schools.com/java/default.asp
+      ">JAVA</a>
+    </div>
+    <!-- <button class="scroll-btn" onclick="scrollRight()">➡</button>!-->
+  </div>
+  <button class="menu-button" onclick="toggleMenu()">&#9776;</button>
+  <div class="menu-container" id="menu">
+    <button class="close-button" onclick="toggleMenu()"> +
+    </button>
+    <a href="#">Home</a>
+    <a href="About_Me">About</a>
+    <a href="/my new website /Contact_Us.html">Contact Us</a>
+  </div>
+  </div>
+  <div class="bgcolor">
+    <header>
+      <nav class="navbarr">
+        <span class="logo">
+          <span class="red">N</span>
+          <span class="red">k</span>
+          <span>T</span>
+          <span>e</span>
+          <span>c</span>
+          <span>h</span>
+          <span class="green">V</span>
+          <span class="green">i</span>
+          <span class="green">s</span>
+          <span class="green">i</span>
+          <span class="green">o</span>
+          <span class="green">n</span>
+        </span>
+      </nav>
+    </header>
+  </div>
+  <div class="md">
+    <div>
+      <img src="https://i.postimg.cc/tCH2hhTK/english.png" alt="english">
+      <h1>
+        ENGLISH
+      </h1>
+      <button class="button" type="button" onclick="LearnEnglish()">Learn English</button>
+    </div>
+  </div>
+  <div class="md">
+    <div>
+      <img src="https://i.postimg.cc/KjrRtf8z/html.png" alt="html">
+      <h1>
+        HTML Tutorial
+      </h1>
+      <button class="button" type="button" onclick="LearnHtml()">Learn Html</button>
+    </div>
+  </div>
+  <div class="md">
+    <div>
+      <img src="https://i.postimg.cc/pLFPdsgD/css.png" alt="css">
+      <h1>
+        CSS Tutorial
+      </h1>
+      <button class="button" type="button" onclick="LearnCss()">Learn CSS</button>
+    </div>
+  </div>
+  <div class="md">
+    <div>
+      <img src="https://i.postimg.cc/br5jyngC/js.png" alt="Java">
+      <h1>
+        JavaScript Tutorial
+      </h1>
+      <button class="button" type="button" onclick="LearnJs()">Learn JavaScript</button>
+    </div>
+  </div>
+  <div class="md">
+    <div>
+      <img src="https://i.postimg.cc/TPB739vW/python.png" alt="py">
+      <h1>
+        Python Tutorial
+      </h1>
+      <button class="button" type="button" onclick="LearnPython()">Learn Python</button>
+    </div>
+  </div>
+  <div class="md">
+    <div>
+      <img src="https://i.postimg.cc/SNW15g3Q/java.png" alt="Java">
+      <h1>
+        Java Tutorial
+      </h1>
+      <button class="button" type="button" onclick="LearnJava()">Learn Java</button>
+    </div>
+  </div>
+  </div>
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 NkTechVision. All rights reserved.</p>
+    </div>
+  </footer>
     <script src="main.js"></script>
-    <script src="/English_Speaking/verbs1.js"></script>
+  
 </body>
-</html>
+  
+</body>
+
+      </html>
