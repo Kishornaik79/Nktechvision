@@ -36,4 +36,14 @@ function LearnPython() {
 
 function LearnJava() {
   window.location.href = "https://www.w3schools.com/java/default.asp";
-                   }
+}
+function GoToHome(){
+  window.location.href ="index.html";
+}
+function Next(){
+  window.location.href ="Basic_Html_Tags.html";
+}
+function introduction_to_html(){
+  window.location.href ="Introduction_to_HTML.html";
+}
+
