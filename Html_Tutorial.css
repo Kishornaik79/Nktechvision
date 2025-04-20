@@ -1,0 +1,145 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #1e3c72, #2a5298); /* Royal Blue Gradient */
+  margin-bottom: 40px;
+}
+    
+.my-header {
+  position: sticky;
+  top: 0;
+  background: linear-gradient(to right,
+  #8e2de2, #4a00e0);
+  padding: 20px;
+  margin: 0px;
+}
+
+.my-header h4 {
+  color: white;
+  margin: 0px;
+  font-size: 1.3rem;
+  text-shadow: 0px 6px 3px black;
+}
+
+h1 {
+  margin-bottom: 30px;
+  padding: 10px;
+}
+
+.intro h2 {
+  padding: 10px;
+  font-size: 1.2rem;
+}
+
+h3 {
+  padding: 10px;
+  color: blue;
+}
+
+.main {
+  background-color: ghostwhite;
+
+  padding-bottom: 10px;
+}
+
+.intro p {
+  background: white;
+  padding: 10px;
+  margin: 20px;
+  word-spacing: 5px;
+  box-shadow: 0px 3px 2px 0px black;
+}
+.code-area {
+  margin-bottom: 1rem;
+}
+
+textarea {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0px 5px 4px 0px black;
+  width: 80%;
+  margin: auto;
+  height: 180px;
+  padding:1px;
+  margin-top: 20px;
+  font-family: monospace;
+  font-size: 1rem;
+  border:none;
+  border-radius: 8px;
+}
+
+button {
+  padding: 8px 16px;
+  margin-top: 30px;
+  background: linear-gradient(to right, #11998e, #38ef7d);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0px 3px 1px 0px white;
+  width: 200px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+button:hover {
+  background: white;
+  color: black;
+  
+}
+
+iframe {
+  width: 100%;
+  height: 200px;
+  margin-top: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+pre {
+  background: #272822;
+  padding: 10px;
+  border-radius: 8px;
+  overflow-x: auto;
+  box-shadow: 0px 3px 2px 0px black;
+}
+.btn {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.btn button {
+  margin: 10px;
+  margin-bottom: 20px;
+  ;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px auto;
+}
+
+  th,td {
+  border: 1px solid #333;
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+   background: linear-gradient(to right, #11998e, #38ef7d);
+   color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #ddd;
+}
