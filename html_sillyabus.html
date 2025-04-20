@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HTML Tutorial - NKTechVision</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      padding: 20px;
+    }
+
+    header {
+      background: linear-gradient(to right, #11998e, #38ef7d);
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      margin-top: 20px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+
+    nav a {
+      display: block;
+      padding: 15px;
+      color: #333;
+      text-decoration: none;
+      border-bottom: 1px solid #eee;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background: #f0f0f0;
+    }
+
+    @media (min-width: 768px) {
+      nav {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      nav a {
+        border-bottom: none;
+        border-right: 1px solid #eee;
+      }
+
+      nav a:nth-child(2n) {
+        border-right: none;
+      }
+    }
+
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 14px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>HTML Tutorial</h1>
+    <p>Learn HTML from Basic to Advanced - By NKTechVision</p>
+  </header>
+
+  <nav id="menu">
+    <a href="/Real_Html_Tutorial/Introduction_to_HTML.html">1. Introduction to HTML</a>
+    <a href="#">2. Basic HTML Tags</a>
+    <a href="#">3. Text Formatting Tags</a>
+    <a href="#">4. HTML Attributes</a>
+    <a href="#">5. HTML Links</a>
+    <a href="#">6. HTML Images</a>
+    <a href="#">7. HTML Lists</a>
+    <a href="#">8. HTML Tables</a>
+    <a href="#">9. HTML Forms</a>
+    <a href="#">10. HTML Media</a>
+    <a href="#">11. Semantic Elements</a>
+    <a href="#">12. Block vs Inline Elements</a>
+    <a href="#">13. HTML5 Features</a>
+    <a href="#">14. HTML APIs</a>
+    <a href="#">15. Accessibility</a>
+    <a href="#">16. Best Practices</a>
+    <a href="#">17. HTML Projects</a>
+  </nav>
+
+  <script>
+    // JS Example: Simple click logging
+    document.querySelectorAll("nav a").forEach(link => {
+      link.addEventListener("click", e => {
+        console.log(`Clicked: ${e.target.textContent}`);
+      });
+    });
+  </script>
+</body>
+</html>
