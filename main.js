@@ -20,7 +20,7 @@ function toggleMenu() {
        window.location.href ="view.html";
      }
      function LearnHtml(){
-       window.location.href ="https://www.w3schools.com/html/default.asp";
+       window.location.href ="html_sillyabus.html";
      }
      function LearnCss() {
   window.location.href = "https://www.tpointtech.com/css-tutorial";
