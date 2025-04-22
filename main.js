@@ -40,12 +40,12 @@ function LearnJava() {
 function GoToHome(){
   window.location.href ="index.html";
 }
-function introduction_to_html(){
+function Next(){
   window.location.href ="Basic_Html_Tags.html";
 }
-//function introduction_to_html(){
- // window.location.href ="Introduction_to_HTML.html";
-//}
+function introduction_to_html(){
+  window.location.href ="Introduction_to_HTML.html";
+}
 function basic_html_tags(){
   window.location.href ="Basic_Html_Tags.html";
 }
