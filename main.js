@@ -44,7 +44,7 @@ function introduction_to_html(){
   window.location.href ="Basic_Html_Tags.html";
 }
 function introduction_to_html(){
-  window.location.href ="Introduction_to_HTML.html";
+  window.location.href ="Basic_Html_Tags.html";
 }
 function basic_html_tags(){
   window.location.href ="Text_Formatting_Tags.html";
