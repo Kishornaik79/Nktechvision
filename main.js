@@ -43,15 +43,15 @@ function GoToHome(){
 function introduction_to_html(){
   window.location.href ="Basic_Html_Tags.html";
 }
-//function introduction_to_html(){
-  //window.location.href ="Introduction_to_HTML.html";
-//}
+function introduction_to_html(){
+  window.location.href ="Introduction_to_HTML.html";
+}
 function basic_html_tags(){
   window.location.href ="Text_Formatting_Tags.html";
 }
-//function text_formmating_tags_c3(){
- // window.location.href = "Text_Formatting_Tags.html";
-//}
+function text_formmating_tags_c3(){
+  window.location.href = "Text_Formatting_Tags.html";
+}
 function linkd_and_images_c4(){
   window.location.href = "Links_and_Images_in_HTML.html";
 }
