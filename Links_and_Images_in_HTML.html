@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Links and Images in HTML</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/Real_Html_Tutorial/Html_Tutorial.css" type="text/css" media="all" />
+  
+</head>
+
+<body>
+  <div class="my-header">
+    <h4>Chapter 4 :- Links and Images </h4>
+  </div>
+  <div class="main">
+    <div class="intro">
+      <h1>Links and Images in HTML</h1><hr>
+      <h2>1 &lt;a&gt; - Anchor Tag (For Links)</h2>
+      <p><b>English :- </b>This tag is used to create hyperlinks.It uses the <mark>href</mark> attribute to specify the link address.</p>
+      
+      <p><b>Hindi :- </b>यह टैग हाइपरलिंक बनाने के लिए इस्तेमाल होता है। href ऐट्रिब्यूट से लिंक का पता दिया जाता है।</p>
+      <pre>
+      <code class="language-html">
+  &lt;a href="https://www.google.com">Visit Google&lt;/a&gt;
+          </code>
+        </pre>
+      <h2> Target Attribute<small> (target="_blank")</small></h2>
+      <p><b>English :- </b> Opens the link a new tab.</p>
+      <p><b>Hindi :- </b>यह लिंक को नई टैब में खोलने के लिए उपयोग होता है।</p>
+      <pre>
+      <code class="language-html">
+  &lt;a href="https://www.google.com"target="_blank">Open in new tab&lt;/a&gt;
+  </pre>
+      </code>
+      <h2> Link to Internal Page</h2>
+      
+      <p><b>Hindi :- </b> यह अपनी वेबसाइट के अंदर दूसरे पेज पर जाने के लिए लिंक बनाता है।</p>
+      
+      <pre>
+    <code class="language-html">
+  &lt;a href="about.html">About Us&lt;/a&gt;
+    </code>
+  </pre>
+      <h2>2 &lt;img&gt; – Image Tag</h2>
+      <p><b>English :- </b> This tag is used to display an image. It uses <mark>src</mark> for the image path and <mark>alt</mark> for alternate text.</p>
+      <p><b>Hindi :- </b>यह टैग इमेज दिखाने के लिए इस्तेमाल होता है। src में इमेज का पता और alt में इमेज ना दिखे तो वैकल्पिक टेक्स्ट होता है।</p>
+      
+      <pre>
+    <code class="language-html">
+  &lt;img src="image.jpg" alt="My Image" width="300" height="200"&gt;
+    </code>
+  </pre>
+      <h2>Attributes of &lt;img&gt; </h2>
+      <table border="0">
+        <tr>
+          <th>Attribute</th>
+          <th>Use</th>
+        </tr>
+        <tr>
+          <td>src</td>
+          <td>Source (image file path)</td>
+        </tr>
+        <tr>
+          <td>alt</td>
+          <td>Alternate text</td>
+        </tr>
+        
+        <tr>
+          <td>width</td>
+          <td>Width of the image</td>
+        </tr>
+        <tr>
+          <td>height</td>
+          <td>Height of the image</td>
+        </tr>
+      </table>
+      <h2>link on Image</h2>
+      <p><b>English :- </b>You can wrap an image inside an anchor (&lt;a&gt;) tag to make it clickable.</p>
+      
+      <p><b>Hindi :- </b>आप इमेज को &lt;a&gt; टैग के अंदर रखकर उसे क्लिक करने लायक बना सकते हैं।</p>
+      
+      <pre>
+    <code class="language-html">
+  &lt;a href="https://www.google.com">
+  &lt;img src="google.png" alt="Google Logo"&gt;
+&lt;/a&gt;
+    </code>
+  </pre>
+      
+      <h3>Example: Links and Images Together</h3>
+      <pre>
+    <code class="language-html">
+  &lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Links and Images by kishor naik&lt;/title&gt;
+&lt;head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;Link Examples&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://www.google.com">Visit Google&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="about.html" target="_blank">Open About Page&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2&gt;Image Example&lt;/h2&gt;
+&lt;img src="nature.jpg" alt="Beautiful Nature" width="300"&gt;
+
+&lt;h2&gt;Image with Link&lt;/h2&gt;
+&lt;a href="https://www.wikipedia.org"&gt;
+  &lt;img src="wiki-logo.png" alt="Wikipedia" width="150"&gt;
+&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code>
+ </pre>
+      <div class="code-area">
+        <textarea id="htmlCode">
+     <!DOCTYPE html>
+<html>
+<head>
+  <title>Links and Images by kishor naik</title>
+</head>
+<body>
+
+<h2>Link Examples</h2>
+<p><a href="https://www.google.com">Visit Google</a></p>
+<p><a href="about us.html" target="_blank">Open About Page</a></p>
+
+<h2>Image Example</h2>
+<img src="nature.jpg" alt="Beautiful Nature" width="300">
+
+<h2>Image with Link</h2>
+<a href="https://www.wikipedia.org">
+  <img src="wiki-logo.png" alt="Wikipedia" width="150">
+</a>
+
+</body>
+</html>
+   </textarea>
+        <center><button onclick="runCode()">Run Code</button></center>
+      </div>
+      <iframe id="output"></iframe>
+      
+      <table border="0">
+        <tr>
+          <th>S.N</th>
+          <th>Tag</th>
+          <th>Use</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>&lt;a&gt;</td>
+          <td>Creates a link</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>href</td>
+          <td>Link address</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>target</td>
+          <td>Open Link in new tab</td>
+        </tr>
+        <tr>
+         <td>4</td>
+          <td>&lt;img&gt;</td>
+          <td>Display an image</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>src</td>
+          <td>Image file path</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>alt</td>
+          <td>Text if image not shown</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>width</td>
+          <td>Image width</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>height</td>
+          <td>Image height</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div class="btn">
+  <button type="button" onclick="GoToHome()">Go To Home</button>
+  <button type="button" onclick="text_formmating_tags_c3()">Back</button>
+  <button type="button" onclick="list_in_html_c5()">Next</button>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="/main.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/Real_Html_Tutorial/Html_Tutorial.js"></script>
+</body>
+
+</html>
