@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tables in html</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/Real_Html_Tutorial/Html_Tutorial.css" type="text/css" media="all" />
+</head>
+
+<body>
+  <div class="my-header">
+    <h4>Chapter 6 :- Tables in Html</h4>
+  </div>
+  <div class="main">
+    <div class="intro">
+      <h1>Tables in Html</h1>
+      <hr>
+      <p><b>English :- </b>HTML tables are used to <b>display data in rows and columns,</b> just like in MX Excel.</p>
+      <p><b>Hindi :- </b>HTML टेबल का उपयोग डेटा को पंक्तियों और स्तंभों (rows & columns) में दिखाने के लिए किया जाता है।</p>
+      
+      <h2>1 Basic Table Structure</h2>
+      <pre>
+        <code class="language-html">
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Name&lt;/th&gt;
+    &lt;th&gt;Age&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;kishor&lt;/td&gt;
+    &lt;td&gt;22&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+        </code>
+      </pre>
+      <h2> Explanation </h2>
+      <table border="0">
+        <tr>
+          <th>S.N</th>
+          <th>Tag</th>
+          <th>Use</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>&lt;table&gt;</td>
+          <td>Creates a table</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>&lt;tr&gt;</td>
+          <td>Table row</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>&lt;th&gt;</td>
+          <td>Table heading cell</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>&lt;td&gt;</td>
+          <td>Table data cell</td>
+        </tr>
+      </table>
+      <h2>2 Border in Table</h2>
+      <p><b>English :- </b><mark>border="1" </mark>attribute adds visible borders.</p>
+      
+      <p><b>Hindi :- </b><mark>border="1" </mark>attribute टेबल के चारों ओर बॉर्डर बनाता है।</p>
+      <h3>Example :-</h3>
+      <pre>
+        <code class="language-html">
+&lt;table border="1"&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Item&lt;/th&gt;
+    &lt;th&gt;Price&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Computer&lt;/td&gt;
+    &lt;td&gt;10,000&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+        </code>
+      </pre>
+      <h2>3 Table with Caption</h2>
+      <p><b>English :- </b>&lt;caption&gt; adds a title on top of table.</p>
+      
+      <p><b>Hindi :- </b> &lt;caption&gt; टैग टेबल का शीर्षक दिखाने के लिए उपयोग होता है।</p>
+      <pre>
+        <code class="language-html">
+&lt;table border="1"&gt;
+  &lt;caption&gt;Student Data&lt;/caption&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Name&lt;/th&gt;
+    &lt;th&gt;Roll No&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Amit&lt;/td&gt;
+    &lt;td&gt;101&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+        </code>
+      </pre>
+      <h2>4 Table with <small>colspan</small> and <small>rowspan</small></h2>
+      <h3> Colspan Example :- </h3>
+      <p><b>English :- </b> <mark>colspan="2" </mark> means the cell covers 2 columns.</p>
+      <p><b>Hindi :- </b> colspan एक सेल को एक से ज़्यादा कॉलम में फैलाने के लिए है।</p>
+      <pre>
+        <code class="language-html">
+&lt;tr&gt;
+  &lt;td colspan="2"&gt;Full Row&lt;/td&gt;
+&lt;/tr&gt;
+        </code>
+      </pre>
+      
+      <h3> Rowspan Example :- </h3>
+      <p><b>English :- </b> <small>rowspan="2"</small> means the cell covers 2 rows.</p>
+      <p><b>Hindi :- </b><mark>rowspan</mark> एक सेल को एक से अधिक रो में फैलाने के लिए होता है।</p>
+      <pre>
+        <code class="language-html">
+&lt;tr&gt;
+  &lt;td rowspan="2"&gt;Join Rows&lt;td&gt;
+  &lt;td&gt;Row 1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+  &lt;td&gt;Row 2&lt;/td&gt;
+&lt;/tr&gt;
+        </code>
+      </pre>
+      <h3>Full Table Example :- </h3>
+      <pre>
+        <code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;HTML Table by kishor naik&lt;/title&gt;
+  &lt;/head&gt;
+&lt;body&gt;
+&lt;h2&gt;Student Details&lt;/h2&gt;
+&lt;table border="1"&gt;
+  &lt;caption&gt;Class 10 Results&lt;/caption&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Name&lt;/th&gt;
+    &lt;th&gt;Subject&lt;/th&gt;
+    &lt;th&gt;Marks&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Kishor&lt;/td&gt;
+    &lt;td&gt;Math&lt;/td&gt;
+    &lt;td&gt;95&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Neha&lt;/td&gt;
+    &lt;td&gt;Science&lt;/td&gt;
+    &lt;td&gt;90&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+        </code>
+      </pre>
+      <div class="code-aera">
+        <textarea id="htmlCode">
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTML Table by kishor naik</title>
+  </head>
+<body>
+<h2>Student Details</h2>
+<table border="1">
+  <caption>Class 10 Results</caption>
+  <tr>
+    <th>Name</th>
+    <th>Subject</th>
+    <th>Marks</th>
+  </tr>
+  <tr>
+    <td>Kishor</td>
+    <td>Math</td>
+    <td>95</td>
+  </tr>
+  <tr>
+    <td>Neha</td>
+    <td>Science</td>
+    <td>90</td>
+  </tr>
+</table>
+</body>
+</html>
+        </textarea>
+        <center>
+  <button onclick="runCode()">Run Code</button>
+</center>
+      </div>
+      <iframe id="output"></iframe>
+      <h2>Quick Summary Table</h2>
+      <table border="0">
+        <tr>
+          <th>S.N</th>
+          <th>Tag</th>
+          <th>Use</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>&lt;table&gt;</td>
+          <td>Creates a table</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>&lt;tr&gt;</td>
+          <td>Table row</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>&lt;td&gt;</td>
+          <td>Table data</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>&lt;th&gt;</td>
+          <td>Table heading</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>&lt;border&gt;</td>
+          <td>Adds table border</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>&lt;caption&gt;</td>
+          <td>Table title</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>&lt;colspan&gt;</td>
+          <td>Merge columns</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>&lt;rowspan&gt;</td>
+          <td>Merge rows</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  
+  <div class="btn">
+  <button type="button" onclick="GoToHome()">Go To Home</button>
+  <button type="button" onclick="lists_in_html_c5()">Back</button>
+  <button type="button" onclick="#">Next</button>
+  <!-- &lt;&gt; -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="/Real_Html_Tutorial/Html_Tutorial.js"></script>
+  <script src="/main.js"></script>
+</body>
+
+</html>
