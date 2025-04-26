@@ -74,7 +74,7 @@ function list_in_html_c5(){
 function tables_in_html_c6(){
   window.location.href = "Tables_in_HTML.html";
 }
-function lists_in_html_c5(){
+function list_in_html_c5(){
   window.location.href = "Lists_in_HTML.html";
 }
 
