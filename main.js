@@ -64,6 +64,9 @@ function attributes_c4() {
 function back_text_formating(){
   window.location.href = "Text_Formatting_Tags.html";
 }
+function links_and_images_in_html_c5(){
+  window.location.href = "Links_and_Images_in_HTML.html";
+}
 
 function list_in_html_c5(){
   window.location.href = "Lists_in_HTML.html";
