@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Attribute in html chapter 4</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/Real_Html_Tutorial/Html_Tutorial.css" type="text/css" media="all" />
+</head>
+
+<body>
+  <div class="my-header">
+    <h4>Chapter 4 :- Attributes in html</h4>
+  </div>
+  <div class="main">
+    <div class="intro">
+      <h2>what are Attributes ?</h2>
+      <p><b>English :- </b> html <b>attributes provide extra information </b> about html elements.<br>They are always written inside the opening tag.</p>
+      <p><b>Hindi :- </b>HTML में attributes किसी टैग के बारे में अतिरिक्त जानकारी देते हैं।
+        यह हमेशा opening tag के अंदर लिखे जाते हैं।</p>
+      <h2>Structure :- </h2>
+      <pre>
+        <code class="language-html">
+ &lt;tagname attribute="value"&gt;Content&lt;/tagname&gt;
+        </code>
+      </pre>
+      <h3>Example :- </h3>
+      <pre>
+        <code class="language-html">
+ &lt;a href="https://www.google.com"&gt;Google&lt;/&gt;
+          </code>
+          </pre>
+      <p>यहां <small>href</small> <b>attribute</b> है, और इसका मान <small>(value) "https://www.google.com"</small> है।</p>
+      <h2> Most Common Html Attributes</h2>
+      <table border="1">
+        <tr>
+          <th>Attribute</th>
+          <th>Element</th>
+          <th>Use</th>
+        </tr>
+        <tr>
+          <td>href</td>
+          <td>&lt;a&gt;</td>
+          <td>Link address</td>
+        </tr>
+        <tr>
+          <td>src</td>
+          <td>&lt;img&gt;</td>
+          <td>Image source</td>
+        </tr>
+        <tr>
+          <td>alt</td>
+          <td>&lt;img&gt;</td>
+          <td>Alternate text if image fails</td>
+        </tr>
+        <tr>
+          <td>title</td>
+          <td>All</td>
+          <td>Tooltip on hover</td>
+        </tr>
+        <tr>
+          <td>width</td>
+          <td>&lt;img&gt; , &lt;table&gt;</td>
+          <td>Width of element</td>
+        </tr>
+        <tr>
+          <td>height</td>
+          <td>&lt;img&gt;, &lt;table&gt;</td>
+          <td>Height of element</td>
+        </tr>
+        <tr>
+          <td>style</td>
+          <td>All</td>
+          <td>Inline CSS styling</td>
+        </tr>
+        <tr>
+          <td>id</td>
+          <td>All</td>
+          <td>Unique identifier</td>
+        </tr>
+        <tr>
+          <td>class</td>
+          <td>All</td>
+          <td>Group identifier for styling</td>
+        </tr>
+      </table>
+      
+      <h3> Examples :- of Attributes</h3>
+      <h2>1 <small> href </small>Attribute</h2>
+      <pre>
+        <code class="language-html">
+ &lt;a href="https://www.example.com">Visit another site&lt;/a&gt;
+        </code>
+
+        </pre>
+      </pre>
+      <p><b>English :- </b>This link goes to another website.</p>
+      <p><b>Hindi :- </b>यह लिंक किसी दूसरी वेबसाइट पर ले जाता है।</p>
+      <h2> 2 <small> src </small>and <small> alt </small>Attributes</h2>
+      <pre>
+        <code class="language-html">
+ &lt;img src="flower.jpg" alt="Beautiful Flower"&gt;
+        </code>
+      </pre>
+      <p><b>English :- </b>if the image doesn't load, "Beautiful Flower" will show.</p>
+      <p><b>Hindi :- </b>Hindi: अगर इमेज नहीं लोड हुई, तो "Beautiful Flower" लिखा आएगा।</p>
+      <h2>3 <small> style </small>Attribute (Inline CSS)</h2>
+      <pre>
+        <code class="language-html">
+ &lt;p style="color: red;"&gt;This is red text &lt;/p&gt;
+        </code>
+      </pre>
+      <p><b>English :- </b>This paragraph will appear in red color. </p>
+      <p><b>Hindi :- </b>यह पैराग्राफ लाल रंग में दिखाई देगा।</p>
+      <h2>4 <small> title </small> Attribute </h2>
+      <pre>
+        <code class="language-html">
+ &lt;p title="This is a tooltip"&gt;Hover over me!&lt;/p&gt;
+        </code>
+      </pre>
+      <p><b>English :- </b>A message will show when you hover over the text.</p>
+      <p><b>Hindi :- </b>जब आप माउस ले जाएंगे, तो एक छोटा मैसेज दिखाई देगा।</p>
+      <h2>5 <small> id </small>Unique Identifier</h2>
+      <pre>
+        <code class="language-html">
+ &lt;h2 id="about"&gt;About Me&lt;/h2&gt;
+        </code>
+      </pre>
+      <p><b>English :- </b> Used to target this element specifically (once only).</p>
+      <p><b>Hindi :- </b>किसी एक खास एलिमेंट को पहचानने के लिए।</p>
+      
+      <h2>6 <small> class </small>Group Identifier </h2>
+      <pre>
+      <code class="language-html">
+&lt;p class="info"&gt;My name is Rahul&lt;/p&gt;
+&lt;p class="info"&gt;I am learning HTML&lt;/p&gt;
+        </code>
+      </pre>
+      <p><b>English :- </b>Use the same class for similar elements.</p>
+      <p><b>Hindi :-</b>एक जैसे एलिमेंट्स को ग्रुप करने के लिए।</p>
+      <h3>Complete Code Using All Attributes:</h3>
+      <pre>
+        <code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;HTML Attributes Example&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;h1 id="main-heading" title="Welcome!">Welcome to My Webpage&lt;/h1&gt;
+
+  &lt;img src="profile.jpg" alt="My Profile Photo" class="profile-image" style="width: 200px; border-radius: 10px;"&gt;
+
+  &lt;p class="info" style="color: red;" title="This is an intro paragraph"&gt;
+    Hello, my name is &lt;span class="highlight"&gt;kishor naik&lt;/span&gt;. I am learning HTML.
+  &lt;/p&gt;
+
+  &lt;a href="https://www.google.com" target="_blank" title="Go to Google" class="link-button"&gt;
+    Visit Google
+  &lt;/a&gt;
+
+  &lt;h2 id="about-section">About Me&lt;h2&gt;
+  &lt;p class="info"&gt;I love coding and designing web pages.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+        </code>
+      </pre>
+      <div class="code-eara">
+        <textarea id="htmlCode">
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML Attributes Example</title>
+</head>
+<body>
+
+  <h1 id="main-heading" title="Welcome!">Welcome to My Webpage</h1>
+
+  <img src="profile.jpg" alt="My Profile Photo" class="profile-image" style="width: 200px; border-radius: 10px;">
+
+  <p class="info" style="color: red;" title="This is an intro paragraph">
+    Hello, my name is <span class="highlight">kishor naik</span>. I am learning HTML.
+  </p>
+
+  <a href="https://www.google.com" target="_blank" title="Go to Google" class="link-button">
+    Visit Google
+  </a>
+
+  <h2 id="about-section">About Me<h2>
+  <p class="info">I love coding and designing web pages.</p>
+
+</body>
+</html>
+        </textarea>
+        <center>
+          <button onclick="runCode()">Run Code</button>
+        </center>
+      </div>
+      <iframe id="output"></iframe>
+      <!-- &lt;&gt; -->
+    </div>
+  </div>
+  <div class="btn">
+    <button type="button" onclick="GoToHome()">Go To Home</button>
+    
+    <!-- here we create two functions
+    back text formatting ç3 and nex links and images c5-->
+    
+    <button type="button" onclick="back_text_formating()">Back</button>
+    <button type="button" onclick="links_and_images_in_html_c5()">Next</button>
+   
+    
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+<script src="/Real_Html_Tutorial/Html_Tutorial.js"></script>
+<script src="/main.js"></script>
+
+</html>
