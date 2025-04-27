@@ -143,3 +143,14 @@ tr:nth-child(even) {
 tr:hover {
   background-color: #ddd;
 }
+.my-ul {
+  background: linear-gradient(to right, #11998e, #38ef7d);
+  margin: 20px 20px;
+  border-radius: 10px;
+  box-shadow: 5px 0px 0px 0px black;
+    }
+.my-ul li {
+  margin: 10px 20px;
+  padding: 10px;
+}
+
