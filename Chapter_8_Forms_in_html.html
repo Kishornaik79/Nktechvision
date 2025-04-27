@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Forms in html</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/Real_Html_Tutorial/Html_Tutorial.css" type="text/css" media="all" />
+</head>
+<body>
+  <div class="my-header">
+    <h4>Chapter 8 :- Forms in html</h4>
+  </div>
+  <div class="main">
+    <div class="intro">
+      <h1> Forms in HTML</h1>
+      <hr>
+      <h2>What is a Form ?</h2>
+      <p><b>English :- </b>An HTML form is used to collect user input. </p>
+      <p><b>Hindi :- </b>HTML Form का उपयोग यूज़र से जानकारी <small>(input)</small> लेने के लिए किया जाता है।</p>
+      <p><b>Forms</b> के अंदर हम <b>Text Box, Radio Button, Checkbox, Submit Button</b> वगैरह यूज़ करते हैं।</p>
+      
+      <h2>Basic Form Structure</h2>
+      <pre>
+          <code class="language-html">
+&lt;form action="submit.php" method="post"&gt;
+  &lt;!-- Form elements go here --&gt;
+&lt;/form&gt;
+          </code>
+        </pre>
+      <ul class="my-ul">
+        <li><b>action</b> = Where the form data will go after submission.<br>
+          <b>action:</b> फॉर्म जमा करने के बाद डेटा कहां भेजना है।
+        </li>
+        <li>
+          <b>method</b> = How the data will be sent (GET या POST).<br>
+          <b>method:</b> डेटा कैसे भेजा जाएगा (GET या POST).
+        </li>
+      </ul>
+      <h2>Common Form Elements with Example </h2>
+      <h2> 1 <small>&lt;input&gt;</small> (Text Field)</h2>
+      <p><b>English :- </b> Creates a textbox for entering name.</p>
+      <p><b>Hindi :- </b>नाम डालने के लिए एक टेक्स्ट बॉक्स बनाता है।</p>
+      
+      <pre>
+        <code class="language-html">
+&lt;form&gt; 
+  &lt;label for="name"&gt;Name:&lt;/label&gt;
+  &lt;input type="text" id="name" name="username"&gt;
+&lt;/form&gt;
+        </code>
+      </pre>
+      <h2> 2 &lt;input type="password"&gt; (Password Field)</h2>
+      <p><b>English :- </b> Hides the entered text as dots.</p>
+      <p><b>Hindi :-</b> पासवर्ड डालते समय अक्षर डॉट्स में बदल जाते हैं।</p>
+      <pre>
+        <code class="language-html">
+&lt;form&gt;
+  &lt;label for="password"&gt;Password:&lt;/label&gt;
+  &lt;input type="password" id="password" name="userpassword"&gt;
+&lt;/form&gt;
+        </code>
+      </pre>
+      
+      <h2> 3 &lt;input type="email"&gt; (Email Field)</h2>
+      <p><b>English :- </b> Validates email format.</p>
+      <p><b>Hindi :- </b>सही ईमेल फॉर्मेट की जांच करता है।</p>
+      
+      <pre>
+        <code class="language-html">
+&lt;form&gt;
+  &lt;label for="email"&gt;Email:&lt;label&gt;
+  &lt;input type="email" id="email" name="useremail"&gt;
+&lt;/form&gt;
+        </code>
+      </pre>
+      
+      <h2> 4 &lt;input type="radio"&gt; (Radio Button)</h2>
+      
+      <p><b>English :- </b> Select one option among many.</p>
+      <p><b>Hindi :- </b>कई विकल्पों में से एक विकल्प चुनने के लिए।</p>
+      
+      <pre>
+        <code class="language-html">
+&lt;form&gt;
+  Gender:&lt;br&gt;
+  &lt;input type="radio" id="male" name="gender" value="male"&gt;
+  &lt;label for="male"&gt;Male&lt;label&gt;&lt;br&gt;
+  
+  &lt;input type="radio" id="female" name="gender" value="female"&gt;
+  &lt;label for="female"&gt;Female&lt;label&gt;
+&lt;/form&gt;
+        </code>
+      </pre>
+      
+      <h2> 5 &lt;input type="checkbox"&gt; (checkbox)</h2>
+      <p><b>English :- </b> You can select multiple hobbies.</p>
+      
+      <p><b>Hindi :- </b>आप कई शौक एक साथ चुन सकते हैं।</p>
+      <pre>
+        <code class="language-html">
+&lt;form&gt; 
+  Choose your hobbies:&lt;br&gt;
+  &lt;input type="checkbox" id="hobby1" name="hobby" value="Reading"&gt;
+  &lt;label for="hobby1"&gt;Reading&lt;/label&gt;&lt;br&gt;
+
+  &lt;input type="checkbox" id="hobby2" name="hobby" value="Traveling"&gt;
+  &lt;label for="hobby2">Traveling&lt;label&gt; &lt;br&gt;
+
+  &lt;input type="checkbox" id="hobby3" name="hobby" value="Coding"&gt;
+  &lt;label for="hobby3"&gt;Coding&lt;label&gt;
+&lt;/form&gt;
+        </code>
+      </pre>
+      <h2> 6 &lt;textarea&gt; (Multi-Line Text Input)</h2>
+      <p><b>English :- </b>For typing large messages.</p>
+      <p><b>Hindi :- </b> बड़े संदेश या फीडबैक के लिए।</p> 
+      <pre>
+        <code class="language-html">
+&lt;form&gt;
+  &lt;label for="message"&gt;Your Message:&lt;/label&gt;&lt;br&gt;
+  &lt;textarea id="message" name="usermessage" rows="4" cols="30"&gt;&lt;/textarea&gt;
+&lt;/form&gt;
+        </code>
+      </pre>
+      <h2> 7 &lt;select&gt; and &lt;option&gt; (Dropdown List)</h2>
+      <p><b>English :- </b> Dropdown menu to select one country.</p>
+      <p><b>Hindi :- </b> एक देश चुनने के लिए ड्रॉपडाउन मेनू।</p>
+      <pre>
+       <code class="language-html">
+&lt;form&gt;
+  &lt;label for="country"&gt;Choose Country:&lt;/label&gt;
+  &lt;select id="country" name="usercountry"&gt;
+    &lt;option value="India"&gt;India&lt;/option&gt;
+    &lt;option value="USA"&gt;USA&lt;/option&gt;
+    &lt;option value="Australia"&gt;Australia&lt;/option&gt;
+  &lt;/select&gt;
+&lt;/form&gt; 
+       </code>
+     </pre>
+      <h2> 8 &lt;button&gt; ( Button to Submit or Click)</h2>
+      <p><b>English :- </b>Button to submit form.</p>
+      <p><b>Hindi :- </b>फॉर्म सबमिट करने के लिए बटन।</p>
+      
+      <pre>
+       <code class="language-html">
+&lt;form&gt; 
+  &lt;button type="submit"&gt;Submit Form&lt;/button&gt;
+&lt;/form&gt; 
+       </code>
+     </pre>
+      <h3> Complete Practical Example :- </h3>
+      <pre>
+        <code class="language-html">
+&lt;!DOCTYPE html&gt; 
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;Registration Form&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;h2&gt;User Registration&lt;/h2&gt;
+
+  &lt;form action="submit.php" method="post"&gt;
+
+    &lt;label for="fullname"&gt;Full Name:&lt;/label&gt;&lt;br&gt;
+    &lt;input type="text" id="fullname" name="fullname" required>&lt;br&gt;&lt;br&gt;
+
+    &lt;label for="email"&gt;Email:&lt;/label&gt;&lt;br&gt;
+    &lt;input type="email" id="email" name="email" required&gt;&lt;br&gt;&lt;br&gt;
+
+    &lt;label for="password"&gt;Password:&lt;/label&gt;&lt;br&gt;
+    &lt;input type="password" id="password" name="password" required&gt;&lt;br&gt;&lt;br&gt;
+
+    &lt;br&gt;Gender:&lt;/p&gt;
+    &lt;input type="radio" id="male" name="gender" value="male"&gt;
+    &lt;label for="male"&gt;Male&lt;/label&gt;
+
+    &lt;input type="radio" id="female" name="gender" value="female"&gt;
+    &lt;label for="female"&gt;Female&lt;/label&gt;&lt;br&gt;&lt;br&gt;
+
+    &lt;p&gt;Hobbies:&lt;/p&gt;
+    &lt;input type="checkbox" id="reading" name="hobby" value="Reading"&gt;
+    &lt;label for="reading"&gt;Reading&lt;/label&gt;
+
+    &lt;input type="checkbox" id="coding" name="hobby" value="Coding"&gt;
+    &lt;label for="coding"&gt;Coding&lt;/label&gt;&lt;br&gt;&lt;br&gt;
+
+    &lt;label for="country"&gt;Country:&lt;/label&gt;&lt;br&gt;
+    &lt;select id="country" name="country"&gt;
+      &lt;option value="India"&gt;India&lt;/option&gt;
+      &lt;option value="USA"&gt;USA&lt;/option&gt;
+    &lt;/select&gt;&lt;br&gt;&lt;br&gt;
+
+    &lt;label for="message"&gt;Message:&lt;/label&gt;&lt;br&gt;
+    &lt;textarea id="message" name="message" rows="4" cols="30"&gt;&lt;/textarea&gt;&lt;br&gt;&lt;br&gt;
+
+    &lt;button type="submit"&gt;Register&lt;/button&gt;
+
+  &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt; 
+        </code>
+      </pre>
+      <div class="code-eara">
+<textarea id="htmlCode" name="htmlCode" rows="4" cols="30">
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Registration Form</title>
+</head>
+<body>
+  <h2>User Registration</h2
+  <form action="submit.php" method="post">
+    <label for="fullname">Full Name:</label><br>
+    <input type="text" id="fullname" name="fullname" required><br><br>
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password" required><br><br>
+    <p>Gender:</p>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label><br><br>
+    <p>Hobbies:</p>
+    <input type="checkbox" id="reading" name="hobby" value="Reading">
+    <label for="reading">Reading</label>
+    <input type="checkbox" id="coding" name="hobby" value="Coding">
+    <label for="coding">Coding</label><br>
+    <label for="country">Country:</label><br>
+    <select id="country" name="country">
+      <option value="India">India</option>
+      <option value="USA">USA</option>
+    </select><br><br>
+<button class="button" type="submit">Register</button>
+  </form>
+</body>
+</html>
+</textarea>
+        <center>
+          <button onclick="runCode()" type="button">Run Code</button>
+        </center>
+      </div>
+      <iframe id="output"></iframe>
+      
+      <h2>Important Points</h2>
+      <ul class="my-ul">
+        <li>Always use label with input for better accessibility.<br>
+          हमेशा input के साथ label का उपयोग करें।
+        </li>
+        <hr>
+        <li>required attribute से फील्ड को अनिवार्य बना सकते हैं।
+          <br>required attribute से फॉर्म भरना अनिवार्य होता है।
+        </li>
+        <hr>
+        <li>name attribute बहुत जरूरी है ताकि डेटा सर्वर पर सही भेजा जाए।<br>
+          name attribute form के डेटा को सर्वर पर भेजने के लिए जरूरी होता है।
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="btn">
+  <button type="button" onclick="GoToHome()">Go To Home</button>
+  <button type="button" onclick="tables_in_html_c7()">Back</button>
+  <button type="button" onclick="#">Next</button>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="/Real_Html_Tutorial/Html_Tutorial.js"></script>
+  <script src="/main.js"></script>
+</body>
+
+</html>
