@@ -77,5 +77,14 @@ function tables_in_html_c6(){
 function lists_in_html_c5(){
   window.location.href = "Lists_in_HTML.html";
 }
+function chapter_8_form_in_html(){
+  window.location.href = "Chapter_8_Forms_in_html.html";
+}
+// back button 
+
+function tables_in_html_c7(){
+  window.location.href = "Tables_in_HTML.html";
+}
+
 
 
