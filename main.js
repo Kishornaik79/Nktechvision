@@ -85,6 +85,15 @@ function chapter_8_form_in_html(){
 function tables_in_html_c7(){
   window.location.href = "Tables_in_HTML.html";
 }
+function chapter_9_multimedia_in_html(){
+  window.location.href = "Chapter_9_Multimedia_in_HTML.html";
+} 
+
+// it's back button codding 
+function chapter_8_forms_in_html(){
+  window.location.href = "Chapter_8_Forms_in_html.html";
+}
+
 
 
 
