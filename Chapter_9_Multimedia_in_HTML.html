@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chapter 9 Multimedia in HTML</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="Html_Tutorial.css" type="text/css" media="all" />
+</head>
+<body>
+  <div class="my-header">
+    <h4>Chapter 9 :- Multimedia_in_HTML</h4>
+  </div>
+  <div class="main">
+    <div class="intro">
+      <h1>Multimedia_in_HTML</h1>
+      <hr>
+      <h2>What is Multimedia ?</h2>
+      <p><b>English :- </b>Multimedia means different types of media like <b>audio (sound), video (moving images), animations,</b> and <b>images.</b></p>
+      <p><b>Hindi:- </b>Multimedia का मतलब है विभिन्न प्रकार के मीडिया जैसे ऑडियो (ध्वनि), वीडियो (चलती हुई तस्वीरें), एनिमेशन और इमेज।</p>
+      <p><b>English :- </b>HTML allows us to easily add <b>audio, video, </b>and other media into web pages.</p>
+      <p><b>Hindi :-</b> HTML की मदद से हम आसानी से वेबसाइट में ऑडियो, वीडियो और अन्य मीडिया जोड़ सकते हैं।</p>
+      <h2>Multimedia Elements in HTML</h2>
+      <p><b>English :-</b> HTML provides different elements to handle multimedia.</p>
+      <p><b>Hindi :-</b> HTML मल्टीमीडिया को संभालने के लिए अलग-अलग एलिमेंट्स देता है।</p>
+      <h2>1 <small> &lt;audio&gt; </small> Element</h2>
+      <p><b>English :- </b> The <b> &lt;audio&gt; </b> tag is used to embed <b>sound</b> content in a document.</p>
+      <p><b>Hindi :- </b> <b>&lt;audio&gt; </b> टैग का उपयोग डाक्यूमेंट में ध्वनि (sound) जोड़ने के लिए किया जाता है।</p>
+      <h3>Example:</h3>
+      <pre>
+        <code class="language-html">
+&lt;audio controls&gt;
+  &lt;source src="song.mp3" type="audio/mpeg"&gt;
+  Your browser does not support the audio element.
+&lt;/audio&gt;
+        </code>
+      </pre>
+      <p><b>English :- </b> This will display audio player controls (play, pause, volume).</p>
+      
+      <p><b>Hindi :- </b> यह एक ऑडियो प्लेयर कंट्रोल दिखाएगा (प्ले, पॉज, वॉल्यूम)।</p>
+      <h2>Attributes of <small>&lt;audio&gt; </small></h2>
+      <ul class="my-ul">
+        <li><b>controls :-</b> Shows the audio controls (play/pause/volume).<br>
+          <b>controls :- </b> ऑडियो कंट्रोल दिखाता है (प्ले/पॉज/वॉल्यूम)।
+        </li>
+        <hr>
+        <li><b>autoplay :-</b> Audio will start automatically.<br>
+          <b>autoplay :- </b>ऑडियो अपने आप शुरू हो जाएगा।
+        </li>
+        <hr>
+        <li><b>loop :-</b> Audio will play repeatedly.<br>
+          <b>loop :-</b> ऑडियो बार-बार बजेगा।
+        </li>
+        <hr>
+        <li><b>muted :-</b> Audio will start muted.<br>
+          <b>muted :-</b> ऑडियो म्यूट होकर शुरू होगा।
+        </li>
+      </ul>
+      <h2>2 &lt;video&gt; Element</h2>
+      <p><b>English :- </b> The<small> &lt;video&gt;</small> tag is used to embed video content.</p>
+      
+      <p><b>Hindi :-</b> <small>&lt;video&gt;</small> टैग का उपयोग वीडियो कंटेंट जोड़ने के लिए किया जाता है।</p>
+      <h3>Example:</h3>
+      <pre>
+        <code class="language-html">
+&lt;video width="320" height="240" controls&gt;
+&lt;source src="movie.mp4" type="video/mp4"&gt;
+Your browser does not support the video tag.
+&lt;/video&gt;
+        </code>
+      </pre>
+      <p><b>English :- </b> This will display a video player with controls.</p>
+      <p><b>Hindi :- </b> यह एक वीडियो प्लेयर कंट्रोल दिखाएगा।</p>
+      <h2>Attributes of <small>&lt;video&gt;</small></h2>
+      <ul class="my-ul">
+        <li><b>controls :- </b>controls – Shows the video controls (play/pause/volume).<br>
+          <b>controls</b> :- वीडियो कंट्रोल दिखाता है (प्ले/पॉज/वॉल्यूम)।
+        </li>
+        <hr>
+        <li><b>autoplay :-</b> Video will play automatically.<br>
+          <b>autoplay :-</b> वीडियो अपने आप शुरू होगा।
+        </li>
+        <hr>
+        <li><b>loop :-</b> Video will replay automatically.<br>
+          <b>loop :-</b> वीडियो खुद से बार-बार चलेगा।
+        </li>
+        <hr>
+        <li><b>muted :-</b> Video will start muted.<br>
+          <b>muted :-</b> वीडियो म्यूट होकर शुरू होगा।
+        </li>
+        <hr>
+        <li><b>poster :-</b> Show an image before the video plays.<br>
+          <b>poster :-</b> वीडियो शुरू होने से पहले एक इमेज दिखाई जाती है।
+        </li>
+      </ul>
+      <h2>3 <small>&lt;embed&gt;</small> Element</h2>
+      <p><b>English :- </b> The <b>&lt;embed&gt;</b> tag is used to embed external files like <b>PDF, Flash, etc.</b></p>
+      <p><b>Hindi :- </b> &lt;embed&gt; टैग का उपयोग बाहरी फाइल्स (PDF, Flash आदि) को जोड़ने के लिए किया जाता है।</p>
+      <h3>Example :</h3>
+      <pre>
+        <code class="language-html">
+&lt;embed src="file.pdf" width="600" height="400"&gt;
+        </code>
+      </pre>
+      <p><b>English :- </b> This will show a <b>PDF</b> file inside the web page.</p>
+      <p><b>Hindi :-</b> यह वेबपेज के अंदर PDF फाइल दिखाएगा।</p>
+      
+      <h2>4 <small>&lt;object&gt;</small> Element</h2>
+      
+      <p><b>English :- </b>The &lt;object&gt; tag is used for embedding <b>multimedia (PDF, images, videos).</b> </p>
+      
+      <p><b>Hindi :- </b> &lt;object&gt; टैग का उपयोग मल्टीमीडिया (PDF, इमेज, वीडियो) जोड़ने के लिए किया जाता है।</p>
+      <h3>Example :</h3>
+      <pre>
+        <code class="language-html">
+&lt;object data="file.pdf" type="application/pdf" width="600" height="400"&gt;
+PDF not supported
+&lt;/object&gt;
+        </code>
+      </pre>
+      <p><b>English :- </b> It will embed a <b>PDF</b> or other file into the page.</p>
+      <p><b>Hindi :- </b>यह वेबपेज पर PDF या अन्य फाइल एम्बेड करेगा।
+      </p>
+      <h2>5 <small>&lt;iframe&gt;</small> Element</h2>
+      <p><b>English :- </b>The <b>&lt;iframe&gt;</b> tag is used to embed another webpage or video (like from YouTube).</p>
+      <p><b>Hindi :- </b>&lt;iframe&gt; टैग का उपयोग किसी अन्य वेबपेज या यूट्यूब वीडियो को एम्बेड करने के लिए किया जाता है।</p>
+      <h3>Example:</h3>
+      <pre>
+        <code class="language-html">
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/your-video-id" frameborder="0" allowfullscreen&gt;
+&lt;/iframe&gt;
+        </code>
+      </pre>
+      <p><b>English :- </b> This will show a YouTube video inside your website. </p>
+      <p><b>Hindi :- </b> यह आपकी वेबसाइट के अंदर यूट्यूब वीडियो दिखाएगा।</p>
+      
+      <h2>Summary Table </h2>
+      <table>
+        <tr>
+          <th>S.N</th>
+          <th>Element</th>
+          <th>Use</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>&lt;audio&gt;</td>
+          <td>To add and play audio/sound on webpage</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>&lt;video&gt;</td>
+          <td>To add and play videos on webpage</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>&lt;embed&gt;</td>
+          <td>To embed external media files like PDF</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>&lt;object&gt;</td>
+          <td>To embed multimedia files like PDFs, images</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>&lt;iframe&gt;</td>
+          <td>To embed other webpages or YouTube videos</td>
+        </tr>
+      </table>
+      <h3>Complete Practical Example</h3>
+      <pre>
+        <code class="language-html">
+&lt;!DOCTYPE html&gt; 
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;Multimedia Example&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;h2&gt;Audio Example&lt;/h2&gt;
+  &lt;audio controls autoplay loop muted&gt;
+    &lt;source src="music.mp3" type="audio/mpeg"&gt;
+    Your browser does not support the audio element.
+  &lt;/audio&gt;
+
+  &lt;h2&gt;Video Example&lt;/h2&gt;
+  &lt;video width="320" height="240" controls&gt;
+    &lt;source src="video.mp4" type="video/mp4"&gt;
+    Your browser does not support the video tag.
+  &lt;/video&gt;
+
+  &lt;h2&gt;Embed Example&lt;/h2&gt;
+  &lt;embed src="sample.pdf" width="600" height="400"&gt;
+
+  &lt;h2&gt;Object Example&lt;/h2&gt;
+  &lt;object data="sample.pdf" type="application/pdf" width="600" height="400"&gt;
+    PDF not supported
+  &lt;/object&gt;
+
+  &lt;h2&gt;Iframe Example&lt;/h2&gt;
+  &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/videoid" frameborder="0" allowfullscreen&gt;
+  &lt;/iframe&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+        </code>
+      </pre>
+      <div class="code-area">
+        <textarea id="htmlCode">
+          <!DOCTYPE html>  
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Multimedia Example</title>
+</head>
+<body>
+
+  <h2>Audio Example</h2>
+  <audio controls autoplay loop muted>
+    <source src="music.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <h2>Video Example</h2>
+  <video width="320" height="240" controls>
+    <source src="video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <h2>Embed Example</h2>
+  <embed src="sample.pdf" width="600" height="400">
+
+  <h2>Object Example</h2>
+  <object data="sample.pdf" type="application/pdf" width="600" height="400">
+    PDF not supported
+  </object>
+
+  <h2>Iframe Example</h2>
+  <iframe width="300" height="200" src="https://www.youtube.com/embed/videoid" frameborder="0" allowfullscreen>
+  </iframe>
+
+</body>
+</html>
+        </textarea>
+        <center>
+          <button onclick="runCode()">
+            Run Code
+          </button>
+        </center>
+      </div>
+      <iframe id="output"></iframe>
+      
+      <h2>Important Points</h2>
+      <ul class="my-ul">
+        <li>Multimedia makes websites more attractive and interesting.<br>
+          मल्टीमीडिया वेबसाइट को और अधिक आकर्षक और दिलचस्प बनाता है।
+        </li>
+        <li>Always provide fallback text in case the browser does not support the media.<br>
+          हमेशा fallback टेक्स्ट देना चाहिए अगर ब्राउज़र मीडिया सपोर्ट नहीं करता।
+        </li>
+        <li>Use proper formats like <b>.mp3 for audio</b> and <b>.mp4 for video.</b><br>
+          ऑडियो के लिए .mp3 और वीडियो के लिए .mp4 जैसे सही फॉर्मेट का उपयोग करें।
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="btn">
+    <button type="button" onclick="GoToHome()">Go To Home</button>
+    <button type="button" onclick="chapter_8_forms_in_html()">Back</button>
+    <button type="button" onclick="#">Next</button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="Html_Tutorial.js"></script>
+    <script src="main.js"></script>
+    
+</body>
+
+</html>
