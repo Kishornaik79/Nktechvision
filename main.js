@@ -93,6 +93,12 @@ function chapter_9_multimedia_in_html(){
 function chapter_8_forms_in_html(){
   window.location.href = "Chapter_8_Forms_in_html.html";
 }
+function chapter_10_semantic_elements_in_html(){
+  window.location.href = "Chapter_10_Semantic_Elements_in_HTML.html";
+}
+function chapter_9_multimedia_in_html(){
+  window.location.href = "Chapter_9_Multimedia_in_HTML.html" 
+}
 
 
 
