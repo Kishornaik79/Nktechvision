@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chapter 10: Semantic Elements in HTML
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="Html_Tutorial.css" type="text/css" media="all" />
+</head>
+
+<body>
+  <div class="my-header">
+    <h4>Chapter 10 :- Semantic Elements
+    </h4>
+  </div>
+  
+  <div class="main">
+    <div class="intro">
+      <h1>What are Semantic Elements ?</h1>
+      <p><b>English :- </b> Semantic elements clearly describe their meaning to both the browser and the developer.</p>
+      <p><b>Hindi :- </b>सेमांटिक एलिमेंट्स अपने अर्थ को ब्राउज़र और डेवलपर दोनों के लिए स्पष्ट रूप से व्यक्त करते हैं।</p>
+      
+      <p><b>English :- </b> Non-semantic elements (like
+        <b>&lt;div&gt;</b> and <b>&lt;span&gt;</b>) tell nothing about their content.
+        Semantic elements (like <b>&lt;header&gt;, &lt;article&gt;, &lt;footer&gt;</b>) clearly define the content inside them.</p>
+      
+      <p><b>Hindi :- </b> Non-semantic elements (जैसे
+        <b>&lt;div&gt;</b>, <b>&lt;span&gt;</b>) उनके कंटेंट के बारे में कुछ नहीं बताते।
+        Semantic elements (जैसे <b>&lt;header&gt;, &lt;article&gt;, &lt;footer&gt;</b>) कंटेंट का सही अर्थ और भूमिका बताते हैं।</p>
+      <h2>Why Semantic HTML is Important?</h2>
+      
+      <ul class="my-ul">
+        <li>Improves SEO (Search Engine Optimization).</li>
+        <li>Helps screen readers for accessibility.</li>
+        <li>Makes code easier to read and maintain.</li>
+        <hr>
+        <li>SEO (Search Engine Optimization) बेहतर बनाता है।</li>
+        <li>Screen readers के लिए एक्सेसिबिलिटी आसान बनाता है।</li>
+        <li>कोड पढ़ना और maintain करना आसान होता है।</li>
+      </ul>
+      <h2>Common Semantic Elements in HTML5</h2>
+      <table border="0">
+        <tr>
+          <th>S.N</th>
+          <th>Element</th>
+          <th>Use</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>&lt;header&gt;</td>
+          <td>Represents the header of a page or section.</td>
+        </tr>
+        <tr>
+          <td>2</td> 
+          <td>&lt;nav&gt;</td>
+          <td>Defines navigation links.</td>
+          <tr>
+            <td>3</td>
+            <td>&lt;section&gt;</td>
+            <td>Groups related content together.</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>&lt;article&gt;</td>
+            <td>Represents an independent piece of content.</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>&lt;aside&gt;</td>
+            <td>Defines content aside from the main content.</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>&lt;footer&gt;</td>
+            <td>Represents the footer of a page or section.</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>&lt;main&gt;</td>
+            <td>Main content of the document.</td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>&lt;figure&gt;</td>
+            <td>Groups media and captions.</td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td>&lt;figcaption&gt;</td>
+            <td>Defines a caption for a figure.</td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td>&lt;mark&gt;</td>
+            <td>Highlights text.</td>
+          </tr>
+          <tr>
+            <td>11</td>
+            <td>&lt;time&gt;</td>
+            <td>Represents date/time information.</td>
+          </tr>
+        </tr>
+      </table>
+      <h2>Detailed Explanation</h2>
+      <h2>1 <small>&lt;header&gt;</small> Element</h2>
+      <p><b>English :- </b> Defines the top <b>header</b> section of a page or section.</p>
+      <p><b>Hindi :- </b>किसी पेज या सेक्शन का शीर्ष (हेडर) भाग दर्शाता है।</p>
+      <h3>Example :</h3>
+      <pre>
+        <code class="language-html">
+ &lt;header&gt;
+  &lt;h1&gt;Welcome to My Website&lt;/h1&gt;
+&lt;/header&gt;
+        </code>
+      </pre>
+      <h3>Example:</h3>
+      <h2>2 <small>&lt;nav&gt;</small> Element</h2>
+      <p><b> English :- </b> Defines a navigation menu containing links.</p>
+      <p><b>Hindi :- </b>एक नेविगेशन मेनू को परिभाषित करता है जिसमें लिंक होते हैं।</p>
+      <h3>Example :</h3>
+      <pre>
+        <code class="language-html">
+&lt;nav&gt;
+&lt;a href="#home"&gt;Home&lt;/a&gt; |
+&lt;a href="#services"&gt;Services&lt;/a&gt; |
+&lt;a href="#contact"&gt;Contact&lt;/a&gt;
+&lt;/nav&gt;
+        </code>
+      </pre>
+      <h2>3 <small>&lt;section&gt;</small> Element</h2>
+      <p><b>English :- </b> Groups related content into a logical block.</p>
+      <p><b>Hindi :-</b> संबंधित कंटेंट को एक लॉजिकल ब्लॉक में ग्रुप करता है।</p>
+      <h3>Example : </h3>
+      <pre>
+        <code class="language-html">
+&lt;section&gt;
+  &lt;h2&gt;Our Services&lt;/h2&gt;
+  &lt;p&gt;We provide web development services.&lt;/p&gt;
+&lt;/section&gt;
+        </code>
+      </pre>
+      <h2>4 <small>&lt;article&gt;</small>  Element</h2>
+      
+      <p><b>English :- </b> Defines independent, self-contained content.</p>
+      <p><b>Hindi :</b>स्वतंत्र और आत्मनिर्भर कंटेंट को परिभाषित करता है।
+      </p>
+      
+      <h3>Example : </h3>
+      <pre>
+        <code class="language-html">
+&lt;article&gt;
+  &lt;h2&gt;HTML Tutorial&lt;/h2&gt;
+  &lt;p&gt;This tutorial helps you learn HTML easily.&lt;/p&gt;
+&lt;/article&gt;
+</code>
+</pre>
+
+<h2>5 <small>&lt;aside&gt;</small> Element </h2>
+<p><b>English :- </b> Content related to the main content but placed aside (like ads, links).</p>
+<p><b>Hindi :- </b>मुख्य कंटेंट से संबंधित लेकिन अलग से रखा गया कंटेंट (जैसे विज्ञापन, लिंक)।</p>
+<h3>Example :</h3>
+
+<pre>
+  <code class="language-html">
+&lt;aside&gt;
+&lt;h3&gt;Related Articles&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="#"&gt;CSS Basics&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;JavaScript Guide&lt;/a&gt;&lt;li&gt;
+&lt;/ul&gt;
+&lt;/aside&gt;
+  </code>
+</pre>
+
+<h2>6 <small>&lt;footer&gt;</small> Element </h2>
+<p><b>English :- </b> Represents the footer area, usually containing copyrights, links.</p>
+<p><b>Hindi :- </b> फूटर क्षेत्र को दर्शाता है, जिसमें आमतौर पर कॉपीराइट या लिंक होते हैं।</p>
+<h3>Example :</h3>
+<pre>
+  <code class="language-html">
+&lt;footer&gt;
+  &lt;p&gt;Copyright © 2025 NKTechVision&lt;/p&gt;
+&lt;/footer&gt;
+  </code>
+</pre>
+
+<h2>7 <small>&lt;main&gt;</small>  Element </h2>
+<p><b>English :- </b> Defines the main content of the page (unique content).</p>
+<h3>Example :</h3>
+<pre>
+  <code class="language-html">
+&lt;main&gt;
+  &lt;h1&gt;Main Content Area&lt;/h1&gt;
+  &lt;p&gt;This is where the primary information appears.&lt;/p&gt;
+&lt;/main&gt;
+  </code>
+</pre>
+
+<h2>8 <small>&lt;figure&gt;</small> and <small>&lt;figcaption&gt;</small> Elements </h2>
+
+<p><b>English :- </b> Used to group media (like images) with a caption.</p>
+<p><b>Hindi :- </b> मीडिया (जैसे इमेज) और उसके कैप्शन को एक साथ ग्रुप करने के लिए उपयोग होता है।</p>
+
+<h3>Example :</h3>
+<pre>
+  <code class="language-html">
+&lt;figure&gt;
+  &lt;img src="mountains.jpg" alt="Beautiful Mountains"&gt;
+  &lt;figcaption&gt;View of beautiful mountains during sunrise.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+  </code>
+</pre>
+
+<h2>9 <small>&lt;mark&gt;</small> Element</h2>
+<p><b>English :- </b> Highlights text to draw attention.</p>
+<p><b>Hindi :- </b> टेक्स्ट को हाइलाइट करता है ताकि ध्यान आकर्षित हो।</p>
+<h3>Example :</h3>
+<pre>
+  <code class="language-html">
+&lt;p&gt;This is a &lt;mark&gt;very important&lt;/mark&gt; message.&lt;/p&gt;
+
+  </code>
+</pre>
+
+<h2>10 <small>&lt;time&gt;</small> Element </h2>
+<p><b>English :- </b>Represents a specific time or date.</p>
+<p><b>Hindi :</b> एक विशिष्ट समय या तिथि को दर्शाता है।</p>
+<h3>Example :</h3>
+<pre>
+  <code class="language-html">
+&lt;p&gt;Event starts at &lt;time datetime="2025-05-01T19:00"&gt;7 PM, May 1, 2025&lt;/time&gt;.&lt;/p&gt;
+
+
+  </code>
+</pre>
+<h3>Complete Practical Example</h3>
+<pre>
+  <code class="language-html">
+ &lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title>Semantic Elements Example&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;header&gt;
+    &lt;h1&gt;My Blog&lt;/h1&gt;
+  &lt;/header&gt;
+
+  &lt;nav&gt;
+    &lt;a href="#home"&gt;Home&gt;/a&gt; |
+    &lt;a href="#about"&gt;About&lt;/a&gt; |
+    &lt;a href="#contact"&gt;Contact&lt;/a&gt;
+  &lt;/nav&gt;
+
+  &lt;main&gt;
+    &lt;section&gt;
+      &lt;article&gt;
+        &lt;h2&gt;Learning HTML&lt;/h2&gt;
+        &lt;p&gt;HTML stands for Hyper Text Markup Language.&lt;/p&gt;
+      &lt;/article&gt;
+    &lt;/section&gt;
+
+    &lt;aside&gt;
+      &lt;h3&gt;Related Links&lt;/h3&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#"&gt;CSS Basics&lt;/a&gt;&lt;/li;&gt;
+        &lt;li&gt;&lt;a href="#"&gt;JavaScript Guide&lt;/a&gt;&lt;/li;&gt;
+      &lt;/ul&gt;
+    &lt;/aside&gt;
+  &lt;/main&gt;
+
+  &lt;footer&gt;
+    &lt;p&gt;© 2025 NKTechVision. All rights reserved.&lt;/p&gt;
+  &lt;/footer&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+  </code>
+</pre>
+
+ <div class="code-area">
+   <textarea id="htmlCode">
+     <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Semantic Elements Example</title>
+</head>
+<body>
+
+  <header>
+    <h1>My Blog</h1>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a> |
+    <a href="#about">About</a> |
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main>
+    <section>
+      <article>
+        <h2>Learning HTML</h2>
+        <p>HTML stands for Hyper Text Markup Language.</p>
+      </article>
+    </section>
+
+    <aside>
+      <h3>Related Links</h3>
+      <ul>
+        <li><a href="#">CSS Basics</a></li>
+        <li><a href="#">JavaScript Guide</a></li>
+      </ul>
+    </aside>
+  </main>
+
+  <footer>
+    <p>© 2025 NKTechVision. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
+        </textarea>
+   <center>
+     <button onclick="runCode()">
+       Run Code
+     </button>
+   </center>
+ </div>
+ <iframe id="output"></iframe>
+<ul class="my-ul">
+  <li>Semantic elements improve the structure of a web page.
+सेमांटिक एलिमेंट्स एक वेबपेज की संरचना को बेहतर बनाते हैं।</li><hr>
+  <li>Help in SEO and accessibility.
+SEO और एक्सेसिबिलिटी में मदद करते हैं।</li><hr>
+  <li>Code becomes cleaner and more professional.
+कोड साफ और ज्यादा प्रोफेशनल बनता है।</li>
+</ul>
+    </div>
+  </div>
+  
+  <div class="btn">
+  <button type="button" onclick="GoToHome()">Go To Home</button>
+  <button type="button" onclick="chapter_9_multimedia_in_html()">Back</button>
+  <button type="button" onclick="#">Next</button>
+</div>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="/Real_Html_Tutorial/Html_Tutorial.js"></script>
+  <script src="/main.js"></script>
+  
+</body>
+
+</html>
