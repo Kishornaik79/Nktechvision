@@ -100,6 +100,54 @@ function chapter_9_multimedia_in_html(){
   window.location.href = "Chapter_9_Multimedia_in_HTML.html" 
 }
 
+function chapter_11_block_vs_inline_elements_in_html() {
+  window.location.href = "Chapter_11_Block_vs_Inline_Elements_in_HTML.html";
+}
+
+function chapter_10_semantic_elements_in_html() {
+  window.location.href = "Chapter_10_Semantic_Elements_in_HTML.html";
+}
+
+function chapter_12_HTML5_features_html() {
+  window.location.href = "Chapter_12_HTML5_Features.html";
+}
+
+function chapter_11_block_vs_inline_elements_in_html() {
+  window.location.href = "Chapter_11_Block_vs_Inline_Elements_in_HTML.html";
+}
+
+function chapter_13_html_apis() {
+  window.location.href = "Chapter_13_HTML_APIs.html";
+}
+
+function chapter_12_HTML5_features() {
+  window.location.href = "Chapter_12_HTML5_Features.html";
+}
+
+function chapter_14_accessibility_in_html() {
+  window.location.href = "Chapter_14_Accessibility_in_HTML.html";
+}
+
+function chapter_13_HTML_apis() {
+  window.location.href = "Chapter_13_HTML_APIs.html";
+}
+
+function chapter_15_HTML_best_practices() {
+  window.location.href = "Chapter_15_HTML_Best_Practices.html";
+}
+
+function chapter_14_accessibility_in_html() {
+  window.location.href = "Chapter_14_Accessibility_in_HTML.html";
+}
+
+function chapter_16_HTML_projects() {
+  window.location.href = "Chapter_16_HTML_Projects.html";
+}
+
+function chapter_15_HTML_best_practices() {
+  window.location.href = "Chapter_15_HTML_Best_Practices.html";
+}
+
 
 
 
