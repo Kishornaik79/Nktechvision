@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chapter 15 Html Best Practices</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="Html_Tutorial.css" type="text/css" media="all" />
+</head>
+
+<body>
+  <div class="my-header">
+    <h4>Chapter 15 :- Html Best Practices</h4>
+  </div>
+  <div class="main">
+    <div class="intro">
+      <h1>HTML Best Practices</h1>
+      <hr>
+      <h2>1 Use Semantic Tags</h2>
+      <p><b>English :- </b>Use tags like &lt;header&gt; , &lt;article&gt; , &lt;section&gt; , &lt;footer&gt; , to make the structure meaningful.</p>
+      <p><b>Hindi :- </b> &lt;header&gt; , &lt;article&gt; , &lt;section&gt; , &lt;footer&gt; जैसे टैग्स का उपयोग करें ताकि वेबसाइट का ढांचा स्पष्ट हो।</p>
+      
+      <pre>
+        <code class="language-html">
+&lt;article&gt;
+  &lt;h2&gt;News Title&lt;/h2&gt;
+  &lt;p&gt;News description here...&lt;/p&gt;
+&lt;/article&gt;
+        </code>
+      </pre>
+      <h2>2 Always Use <small>alt</small> for Images </h2>
+      <p><b>English :- </b>Screen readers need <small>alt</small> text to describe images.</p>
+      
+      <p><b>Hindi :- </b> <small>alt</small> टेक्स्ट से स्क्रीन रीडर इमेज को समझ सकता है।</p>
+      
+      <pre>
+        <code class="language-html">
+ &lt;img src="cat.jpg" alt="A black cat sitting on a chair"&gt;
+        </code>
+        </pre>
+      <h2>3 Use Proper Doctype </h2>
+      <p><b>English :- </b> Start your Html document with <small>&lt;!DOCTYPE html&gt;</small> to ensure modern browser rendering.</p>
+      
+      <p><b>Hindi :- </b>HTML डॉक्युमेंट की शुरुआत <small>&lt;!DOCTYPE html&gt;</small> से करें ताकि ब्राउज़र उसे सही से रेंडर कर सके।</p>
+      <h2>4 Indentation and Formatting</h2>
+      <p><b>English :- </b> Always write clean and properly indented HTML for readability.</p>
+      <p><b>Hindi :- </b> HTML को साफ़ और सही ढंग से इंडेंट करके लिखें ताकि पढ़ना आसान हो।
+      </p>
+      <h2>5 Avoid Inline CSS and Js</h2>
+      <p><b>English :- </b> Use external files for CSS and JavaScript.</p>
+      <p><b>Hindi :- </b> CSS और JavaScript के लिए अलग फाइल का उपयोग करें। </p>
+      
+      <pre>
+        <code class="language-html">
+ &lt;!-- Good --&gt;
+&lt;link rel="stylesheet" href="style.css"&gt;
+&lt;script src="script.js"&gt;&lt;/script&gt;
+        </code>
+      </pre>
+      <h2>6 Use <small>meta charset="UTF-8"</small> </h2>
+      
+      <p><b>English :- </b> Ensures that special characters and multiple languages work correctly.</p>
+      <p><b>Hindi :- </b> यह सुनिश्चित करता है कि विशेष अक्षर और भाषाएं सही से दिखें।</p>
+      <pre>
+        <code class="language-html">
+ &lt;meta charset="UTF-8"&gt;
+        </code>
+      </pre>
+      <h2>7 Always Close Tags </h2>
+      <p><b>English :- </b> Even optional tags should be closed for good habit.</p>
+      
+      <p><b>Hindi :- </b> टैग्स को बंद करना जरूरी है, भले ही वह ऑप्शनल हों।</p>
+      <pre>
+        <code class="language-html">
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+        </code>
+      </pre>
+      <h2>8 Validate Your Code</h2>
+      <p><b>English :- </b>Use <b>W3C</b> Validator to check if your HTML code is correct.<br><br>
+        <a href="https://validator.w3.org/">https://validator.w3.org/</a>
+      </p>
+      <p><b>Hindi :- </b> W3C Validator से HTML कोड की जांच करें।</p>
+      <h2>9 Use Meaningful Titles</h2>
+      <p><b>English :- </b> The <small>&lt;title&gt;</small> tag should describe the page content clearly.</p>
+      <p><b>Hindi :- </b> <small>&lt;title&gt;</small> टैग में पेज की सही जानकारी दें।</p>
+      <pre>
+        <code class="language-html">
+&lt;title&gt;NKTechVision - Web Development Tutorial&lt;/title&gt;
+        </code>
+      </pre>
+      <h2>10 Keep Accessibility in Mind</h2>
+      <p><b>English :- </b> Use <small>label</small> , <small>alt</small> , semantic tags, and keyboard-friendly navigation.</p>
+      <p><b>Hindi :- </b><small>label</small> , <small>alt</small> , semantic टैग्स और कीबोर्ड से नेविगेशन जैसी चीज़ों को अपनाएं।</p>
+      
+      <table border="1">
+        <th>Best Practice</th>
+        <th>Purpose</th>
+        <tr>
+          <td>Semantic Tags</td>
+          <td>Give meaning to structure</td>
+        </tr>
+        <tr>
+          <td>Alt Text for Images</td>
+          <td>Help visually impaired users</td>
+        </tr>
+        <tr>
+          <td>Use Doctype</td>
+          <td>Enable proper browser rendering </td>
+        </tr>
+        <tr>
+          <td>Proper Indentation</td>
+          <td>Improve readability</td>
+        </tr>
+        <tr>
+          <td>External CSS/JS</td>
+          <td>Easier maintenance</td>
+        </tr>
+        <tr>
+          <td>Meta Charset UTF-8</td>
+          <td>Multilingual support</td>
+        </tr>
+        <tr>
+          <td>Always Close Tags</td>
+          <td>Clean and error-free code</td>
+        </tr>
+        <tr>
+          <td>Validate Code</td>
+            <td>Catch errors and improve quality</td>
+        </tr>
+        <tr>
+          <td>Meaningful Titles</td>
+          <td>Better CEO and user understanding</td>
+        </tr>
+        <tr>
+          <td>Accessibility Support</td>
+          <td>Make websites usable for everyone</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div class="btn">
+    <button type="button" onclick="GoToHome()">Go To Home</button>
+    <button type="button" onclick="chapter_14_accessibility_in_html()">Back</button>
+    <button type="button" onclick="chapter_16_HTML_projects()">Next</button>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="Html_Tutorial.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
