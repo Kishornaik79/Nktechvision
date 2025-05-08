@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chapter 12 HTML5 Features</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="Html_Tutorial.css" type="text/css" media="all" />
+</head>
+
+<body>
+  <div class="my-header">
+    <h4>Chapter 12 :- HTML5 Features</h4>
+  </div>
+  <div class="main">
+    <div class="intro">
+      <h1>What is HTML5 ?</h1>
+      <hr>
+      <p><b>English :- </b><b>HTML5</b> is the latest version of html that introduced many new features to build modern websites and web applications.</p>
+      <p><b>Hindi :- </b> <b>HTML5</b> HTML का नया वर्शन है जिसमें कई नए टैग्स और फीचर्स जोड़े गए हैं जिससे वेबसाइट बनाना आसान और ज़्यादा फंक्शनल हो गया है।
+      </p>
+      <h2>Top HTML5 Features</h2>
+      <hr>
+      <h2>1 New Semantic Elements</h2>
+      <p><b>English :- </b> Meaningful tags to structure content clearly.</p>
+      <p><b>Hindi :- </b> साइट के भागों को सही ढंग से समझाने वाले नए टैग।</p>
+      <h3>Examples:</h3>
+      <pre>
+        <code class="language-html">
+&lt;header&gt;, &lt;footer&gt;, &lt;nav&gt;, &lt;section&gt;, &lt;article&gt;, &lt;aside&gt;
+
+        </code>
+      </pre>
+      <h2>2 Audio and Video Support</h2>
+      <p><b>English :- </b> No need for Flash. You can directly play media files.</p>
+      <p><b>Hindi :- </b> अब फ्लैश की जरूरत नहीं, HTML से ही ऑडियो/वीडियो चला सकते हैं।</p>
+      <h3>Examples:</h3>
+      <pre>
+        <code class="language-html">
+&lt;audio controls src="song.mp3"&gt;&lt;/audio&gt;
+&lt;video controls src="video.mp4"&gt;&lt;/video&gt;
+
+        </code>
+      </pre>
+      <h2>3 Canvas Element</h2>
+      <p><b>English :- </b> Used to draw graphics using JavaScript (like games, charts, animations).</p>
+      <p><b>Hindi :- </b> JavaScript की मदद से graphics बनाने के लिए।</p>
+      <h3>Example:</h3>
+      <pre>
+        <code class="language-html">
+&lt;canvas id="myCanvas" width="200" height="100"&gt;&lt;/canvas&gt;
+        </code>
+      </pre>
+      <h2>4 SVG (Scalable Vector Graphics)</h2>
+      <p><b>English :-</b> For drawing 2D graphics that scale without losing quality.</p>
+      <p><b>Hindi :- </b> इमेज को बिना धुंधला किए स्केल करने के लिए।</p>
+      <h3>Example:</h3>
+      <pre>
+        <code class="language-html">
+&lt;svg width="100" height="100"&gt;
+  &lt;circle cx="50" cy="50" r="40" fill="blue" /&gt;
+&lt;/svg&gt;
+        </code>
+      </pre>
+      <h2>5 New Input Types</h2>
+      <p><b>English :-</b> Better and mobile-friendly form controls.</p>
+      <p><b>Hindi :- </b> नई इनपुट टाइप्स से फॉर्म यूज़र-फ्रेंडली बनते हैं।</p>
+      <h3>Examples:</h3>
+      <pre>
+        <code class="language-html">
+&lt;input type="email"&gt;
+&lt;input type="date"&gt;
+&lt;input type="range"&gt;
+&lt;input type="color"&gt;
+        </code>
+      </pre>
+      
+      <h2>6 Placeholder Attribute</h2>
+      <p><b>English :- </b> Shows hint text inside inputs.</p>
+      <p><b>Hindi :- </b>इनपुट बॉक्स में संकेत देने के लिए।</p>
+      <h3>Example:</h3>
+      <pre>
+        <code class="language-html">
+&lt;input type="text" placeholder="Enter your name"&gt;
+        </code>
+      </pre>
+      
+      <h2>7 Local Storage and Session Storage</h2>
+      <p><b>English :- </b> Store data in browser without database.</p>
+      <p><b>Hindi :- </b> ब्राउज़र में डेटा सेव करने की सुविधा।</p>
+      <h3>Example:</h3>
+      <pre>
+        <code class="language-js">
+ localStorage.setItem("username", "nktech");
+        </code>
+      </pre>
+      
+      <h2>Geolocation API</h2>
+      <p><b>English :- </b> Get user's location using browser.</p>
+      <p><b>Hindi :- </b> यूज़र की लोकेशन ट्रैक करने के लिए।</p>
+      <h3>Example:</h3>
+      <pre>
+        <code class="language-js">
+navigator.geolocation.getCurrentPosition(showPosition);
+        </code>
+      </pre>
+      
+      <h2>9 Responsive Design Support</h2>
+      <p><b>English :- </b> Better mobile view support using <small><b>&lt;meta&gt; </b></small> tag.</p>
+      <p><b>Hindi :- </b> मोबाइल पर बेहतर दिखने के लिए।</p>
+      <h3>Example:</h3>
+      <pre>
+        <code class="language-html">
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        </code>
+      </pre>
+      <h2>10 Drag and Drop Support </h2>
+      <p><b>English :- </b> You can drag items on a page without JavaScript libraries.</p>
+      <p><b>Hindi :- </b> HTML5 से ड्रैग और ड्रॉप आसानी से हो सकता है।
+      </p>
+      <h3>Complete Code Example:</h3>
+      <pre>
+        <code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;title&gt;HTML5 Features&lt;/title&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;header&gt;&lt;h1&gt;Welcome to HTML5&lt;/h1&gt;&lt;/header&gt;
+
+&lt;section&gt;
+&lt;article&gt;
+&lt;h2&gt;Video Example&lt;/h2&gt;
+&lt;video controls width="300"&gt;
+&lt;source src="video.mp4" type="video/mp4"&gt;
+&lt;/video&gt;
+&lt;/article&gt;
+
+&lt;article&gt;
+&lt;h2&gt;Canvas Example&lt;/h2&gt;
+&lt;canvas width="200" height="100" style="border:1px solid black;"&gt;&lt;/canvas&gt;
+&lt;/article&gt;
+
+&lt;article&gt;
+&lt;h2&gt;Form Input Types&lt;/h2&gt;
+&lt;form&gt;
+&lt;input type="email" placeholder="Enter email"&gt;&lt;br&gt;
+&lt;input type="date"&gt;&lt;br&gt;
+&lt;input type="color"&gt;&lt;br&gt;
+&lt;/form&gt;
+&lt;/article&gt;
+&lt;/section&gt;
+
+&lt;footer&gt;&amp;copy; 2025 NKTechVision&lt;/footer&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+        </code>
+      </pre>
+      <div class="code-area">
+        <textarea id="htmlCode">
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>HTML5 Features</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+  <header><h1>Welcome to HTML5</h1></header>
+  
+  <section>
+    <article>
+      <h2>Video Example</h2>
+      <video controls width="300">
+        <source src="video.mp4" type="video/mp4">
+      </video>
+    </article>
+
+    <article>
+      <h2>Canvas Example</h2>
+      <canvas width="200" height="100" style="border:1px solid black;"></canvas>
+    </article>
+
+    <article>
+      <h2>Form Input Types</h2>
+      <form>
+        <input type="email" placeholder="Enter email"><br><br>
+        <input type="date"><br><br>
+        <input type="color"><br><br>
+      </form>
+    </article>
+  </section>
+
+  <footer>&copy; 2025 NKTechVision</footer>
+
+</body>
+</html>
+        </textarea>
+        <center>
+          <button onclick="runCode()">Run Code</button>
+        </center>
+      </div>
+      <iframe id="output"></iframe>
+      <table border="1">
+        <tr>
+          <th>S.N</th>
+          <th>Feature</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Semantic Elements</td>
+          <td>Logical structure of content</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Audio and Video</td>
+          <td>Embed media without plugins</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Canvas and SVG</td>
+          <td>Draw graphics and scalable visuals</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>New Form Inputs</td>
+          <td>Advanced and mobile-friendly inputs</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Placeholder</td>
+          <td>Hint inside input field</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Local/Session Storage</td>
+          <td>Store data on client-side</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Geolocation API</td>
+          <td>Get user's location</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>Viewport Tag</td>
+          <td>For mobile responsive design</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>Drag and Drop</td>
+          <td>Interactively move elements</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <!--  &lt;&gt; -->
+  <div class="btn">
+    <button type="button" onclick="GoToHome()">Go To Home</button>
+    <button type="button" onclick="chapter_11_block_vs_inline_elements_in_html()">Back</button>
+    <button type="button" onclick="chapter_13_html_apis()">Next</button>
+  </div>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="Html_Tutorial.js"></script>
+  <script src="main.js"></script>
+  
+</body>
+
+</html>
