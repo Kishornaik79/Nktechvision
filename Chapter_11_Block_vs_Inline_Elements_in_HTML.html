@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Block vs Inline Elements in HTML</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/Real_Html_Tutorial/Html_Tutorial.css" type="text/css" media="all" />
+</head>
+
+<body>
+  <div class="my-header">
+    <h4>Chapter 11 :- Block vs Inline Elements</h4>
+  </div>
+  <div class="main">
+    <div class="intro">
+      <h1>Block vs Inline Elements</h1>
+      <hr>
+      <h2>What is a Bolck Element?</h2>
+      <p><b>English :- </b> A block element always starts on a new line and takes the full width available. Block elements are like containers that stack vertically.</p>
+      <p><b>Hindi :- </b> Block element हमेशा नई लाइन से शुरू होता है और पूरी चौड़ाई (width) ले लेता है।
+        ये ऐसे होते हैं जैसे एक-एक करके ऊपर-नीचे बॉक्स रखें हो।</p>
+      <h2>Common Block Elements</h2>
+      <table>
+        <tr>
+          <th>Block Elements</th>
+        </tr>
+        <tr>
+          <td>&lt;div&gt;</td>
+        </tr>
+        <tr>
+          <td>&lt;p&gt;</td>
+        </tr>
+        <tr>
+          <td>&lt;h1&gt; to &lt;h6&gt;</td>
+        </tr>
+        <tr>
+          <td>&lt;section&gt;</td>
+        </tr>
+        <tr>
+          <td>article</td>
+        </tr>
+        <tr>
+          <td>&lt;header&gt; , &lt;footer&gt;</td>
+        </tr>
+        <tr>
+          <td>&lt;form&gt;</td>
+        </tr>
+        <tr>
+          <td>&lt;ul&gt; , &lt;ol&gt; , &lt;li&gt;</td>
+        </tr>
+      </table>
+      <h3>Block Element Example :</h3>
+      <pre>
+          <code class="language-html">
+ &lt;div&gt;This is a block element&lt;/div&gt;
+&lt;p&gt;This is a paragraph&lt;/p&gt;
+&lt;h2&gt;This is a heading&lt;/h2&gt;
+          </code>
+        </pre>
+      <h2>Explanation :- </h2>
+      <P><b>English :- </b> Each of these elements appears on a <b>new line </b>and takes <b> full width.</b></P>
+      <p><b>Hindi :- </b> हर एक एलिमेंट नई लाइन से शुरू होगा और पूरी चौड़ाई लेगा।</p>
+      
+      <h2>What is an inline Element?</h2>
+      <P><b>English :- </b> An inline element does not start on a new line. It only takes as much width as necessary.
+        inline elements stay within a line.</P>
+      <p><b>Hindi :- </b> Inline element नई लाइन से शुरू नहीं होता। ये उतनी ही जगह लेता है जितनी जरूरत हो।
+        ये लाइन के अंदर ही रहता है।</p>
+      
+      <h2>Common Inline Elements</h2>
+      <table>
+        <tr>
+          <th>Inline Elements</th>
+        </tr>
+        <tr>
+          <td>&lt;span&gt;</td>
+        </tr>
+        <tr>
+          <td>&lt;a&gt;</td>
+        </tr>
+        <tr>
+          <td>&lt;img&gt;</td>
+        </tr>
+        <tr>
+          <td>&lt;strong&gt;</td>
+        </tr>
+        <tr>
+          <td>&lt;em&gt;</td>
+        </tr>
+        <tr>
+          <td>&lt;label&gt;</td>
+        </tr>
+        <tr>
+          <td>&lt;input&gt;</td>
+        </tr>
+      </table>
+      <h3>Inline Element Example :</h3>
+      <pre>
+          <code class="language-html">
+&lt;p&gt;This is a &lt;span&gt;highlighted&lt;/span&gt; word in a sentence.&lt;/p&gt;
+&lt;a href="#"&gt;Click here&lt;/a&gt;
+
+          </code>
+        </pre>
+      <h2>Explanation</h2>
+      <p><b>English :- </b> These elements appear <b>inside</b> a line and <b>do not break</b> the flow.</p>
+      <p><b>Hindi :- </b> ये एलिमेंट एक ही लाइन के अंदर रहते हैं और लाइन नहीं तोड़ते।</p>
+      <table border="1">
+        <tr>
+          <th>Feature</th>
+          <th>Block Element</th>
+          <th>Inline Element</th>
+        </tr>
+        <tr>
+          <td>Starts on new line</td>
+          <td>Yes</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>Takes full width</td>
+          <td>Yes</td>
+          <td>No (only needed width)</td>
+        </tr>
+        <tr>
+          <td>Layout</td>
+          <td>Vertical (top to bottom)</td>
+          <td>Horizontal (within text flow)</td>
+        </tr>
+        <tr>
+          <td>Example Tags </td>
+          <td>&lt;div&gt; , &lt;p&gt; , &lt;h1&gt;</td>
+          <td>&lt;span&gt; , &lt;a&gt; , &lt;img&gt;</td>
+        </tr>
+      </table>
+      <h3>Mixed Example :</h3>
+      <pre>
+        <code class="language-html">
+&lt;div&gt;
+  &lt;p&gt;This is a &lt;span style="color:red;"&gt;mixed&lt;/span&gt; example.&lt;/p&gt;
+  &lt;a href="#"&gt;Inline link&lt;/a&gt;
+&lt;/div&gt;
+        </code>
+      </pre>
+      <h2>Explanation :</h2>
+      
+      <p><b>&lt;div&gt; </b> and <b>&lt;p&gt; </b> are block elements (start from new lines).</p>
+      <p><b>&lt;span&gt; </b>and <b>&lt;a&gt; </b> are inline (stay inside the line).</p>
+      <h2>Complete Example : Block vs Inline Elements in HTML</h2>
+      
+      <pre>
+        <code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;title&gt;Block vs Inline Elements&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;Block Element Example&lt;/h1&gt;
+
+&lt;div style="background-color: lightblue; padding: 10px;"&gt;
+This is a block-level &lt;strong&gt;div&lt;/strong&gt; element.
+&lt;/div&gt;
+
+&lt;p style="background-color: lightgreen; padding: 10px;"&gt;
+This is a block-level &lt;strong&gt;p&lt;/strong&gt; paragraph.
+&lt;/p&gt;
+
+&lt;h2&gt;Inline Element Example&lt;/h2&gt;
+
+&lt;p&gt;
+This is a sentence with &lt;span style="color: red;"&gt;inline&lt;/span&gt;
+&lt;strong&gt;&lt;span&gt;text&lt;/span&gt;&lt;/strong&gt;. Click
+&lt;a href="#" style="color: blue;"&gt;here&lt;/a&gt; for more info.
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;img src="https://via.placeholder.com/100" alt="Sample" style="vertical-align: middle;"&gt;
+This &lt;strong&gt;img&lt;/strong&gt; tag is also inline.
+&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+        </code>
+      </pre>
+      <div class="code-area">
+        <textarea id="htmlCode">
+        
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Block vs Inline Elements</title>
+</head>
+<body>
+
+  <h1>Block Element Example</h1>
+
+  <div style="background-color: lightblue; padding: 10px;">
+    This is a block-level <strong>div</strong> element.
+  </div>
+
+  <p style="background-color: lightgreen; padding: 10px;">
+    This is a block-level <strong>p</strong> paragraph.
+  </p>
+
+  <h2>Inline Element Example</h2>
+
+  <p>
+    This is a sentence with <span style="color: red;">inline</span>
+    <strong><span>text</span></strong>. Click
+    <a href="#" style="color: blue;">here</a> for more info.
+  </p>
+
+  <p>
+    <img src="https://via.placeholder.com/100" alt="Sample" style="vertical-align: middle;">
+    This <strong>img</strong> tag is also inline.
+  </p>
+
+</body>
+</html>
+        </textarea>
+        <center>
+          <button onclick="runCode()">Run Code</button>
+        </center>
+      </div>
+      <iframe id="output"></iframe>
+      
+      <h2>Important Points</h2>
+      <ul class="my-ul">
+        <li>Block elements make page layout.<br>
+          Block elements पेज का ढांचा बनाते हैं।</li>
+        <hr>
+        <li>Inline elements are used for small pieces inside content.<br>
+          Inline elements कंटेंट के अंदर छोटे हिस्से के लिए होते हैं।</li>
+        <hr>
+        <li>We can style both using CSS.<br>
+          दोनों को CSS से स्टाइल किया जा सकता है।
+        </li>
+      </ul>
+      
+    </div>
+    
+  </div>
+  <div class="btn">
+    <button type="button" onclick="GoToHome()">Go To Home</button>
+    <button type="button" onclick="chapter_10_semantic_elements_in_html()">Back</button>
+    <button type="button" onclick="chapter_12_HTML5_features_html()">Next</button>
+  </div>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="/Real_Html_Tutorial/Html_Tutorial.js"></script>
+  <script src="/main.js"></script>
+  
+</body>
+
+</html>
