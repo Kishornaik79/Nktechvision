@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chapter 13 html APIs by nktechvision</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/Real_Html_Tutorial/Html_Tutorial.css" type="text/css" media="all" />
+</head>
+
+<body>
+  <div class="my-header">
+    <h4>Chapter 13 :- Html APIs</h4>
+  </div>
+  <div class="main">
+    <div class="intro">
+      <h1>What is an API ?</h1>
+      <hr>
+      <p><b>English :- </b> <b>API (Application Programming Interface)</b> is a set of built-in features or tools that let HTML/JavaScript interact with the browser.</p>
+      <p><b>Hindi :- </b> <b>API</b> एक तरीका होता है जिससे HTML/JavaScript ब्राउज़र के साथ बात कर सकते हैं – जैसे कि यूज़र की लोकेशन लेना, डेटा सेव करना, या एलिमेंट्स को ड्रैग करना।</p>
+      
+      <h2>Popular HTML5 APIs</h2>
+      <hr>
+      <h2>1 Geolocation API</h2>
+      <p><b>English :- </b> <b>Purpose:</b> Get the user's current location.</p>
+      <p><b>Hindi :- </b> <b>उद्देश्य:</b> यूज़र की वर्तमान location प्राप्त करना।</p>
+      <pre>
+        <code class="language-js">
+navigator.geolocation.getCurrentPosition(function(position) {
+console.log("Latitude: " + position.coords.latitude);
+console.log("Longitude: " + position.coords.longitude);
+});
+        </code>
+      </pre>
+      
+      <p class="note">
+        <b>Note: </b>ब्राउज़र अनुमति (permission) मांगेगा।
+      </p>
+      <hr>
+      
+      <h2>2 Web Storage API </h2>
+      <h2>Types :</h2>
+      <ul class="my-ul">
+        <li><b>localStorage : </b>डेटा तब तक सेव रहता है जब तक मैन्युअली हटाया न जाए।</li>
+        <li><b>sessionStorage : </b>डेटा ब्राउज़र टैब बंद होने तक ही रहता है।</li>
+      </ul>
+      
+      <h3>localStorage Example:</h3>
+      <pre>
+        <code class="language-javascript">
+localStorage.setItem("username", "nktech");
+let name = localStorage.getItem("username");
+console.log(name);
+        </code>
+      </pre>
+      
+      <h3>sessionStorage Example:</h3>
+      <pre>
+        <code class="language-javascript">
+ sessionStorage.setItem("color", "blue");
+        </code>
+      </pre>
+      
+      <h2>3 Drag and Drop API </h2>
+      <p><b>Purpose :- </b> किसी भी एलिमेंट को माउस से खींचकर किसी जगह गिराना।</p>
+      
+      
+      <pre> <!-- code to be edit use &lt;&gt;-->
+        <code class="language-javascript">
+&lt;div id="dragme" draggable="true" ondragstart="drag(event)"&gt;Drag me&lt;/div&gt;
+&lt;div id="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)"&gt;Drop here&lt;/div&gt;
+
+&lt;script&gt;
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+&lt;/script&gt;
+        </code>
+      </pre>
+      
+      <h2>4 Canvas API </h2>
+      <pre><!--edit code -->
+        <code class="language-javascript">
+ &lt;canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;"&gt;&lt;/canvas&gt;
+
+&lt;script&gt;
+  let canvas = document.getElementById("myCanvas");
+  let ctx = canvas.getContext("2d");
+  ctx.fillStyle = "red";
+  ctx.fillRect(20, 20, 150, 50);
+&lt;/script&gt;
+        </code>
+      </pre>
+      
+      
+      <h2>5 Fullscreen API </h2>
+      <pre> <!--edit code -->
+        <code class="language-javascript">
+function makeFullScreen() {
+document.documentElement.requestFullscreen();
+}
+        </code>
+      </pre>
+      
+      
+      <h3>Complete Example </h3>
+      <pre> <!-- edit code -->
+        <code class="language-javascript">
+       
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;HTML5 APIs Example&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;h2&gt;Geolocation&lt;/h2&gt;
+  &lt;button onclick="getLocation()"&gt;Get Location&lt;/button&gt;
+  &lt;p id="location"&gt;&lt;/p&gt;
+
+  &lt;h2&gt;Local Storage&lt;/h2&gt;
+  &lt;button onclick="saveData()"&gt;Save Name&lt;/button&gt;
+  &lt;p id="savedData"&lt;/p&gt;
+ 
+  &lt;script&gt;
+    function getLocation() {
+      navigator.geolocation.getCurrentPosition(function(pos) {
+        document.getElementById("location").innerText =
+          "Lat: " + pos.coords.latitude + ", Long: " + pos.coords.longitude;
+      });
+    }
+
+    function saveData() {
+      localStorage.setItem("name", "NKTechVision");
+      document.getElementById("savedData").innerText = localStorage.getItem("name");
+    }
+  &lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+        </code>
+      </pre>
+      <div class="code-area">
+        <textarea id="htmlCode">
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTML5 APIs Example</title>
+</head>
+<body>
+
+  <h2>Geolocation</h2>
+  <button onclick="getLocation()">Get Location</button>
+  <p id="location"></p>
+
+  <h2>Local Storage</h2>
+  <button onclick="saveData()">Save Name</button>
+  <p id="savedData"</p>
+    
+   <h2>Drag and Drop API</h2> <!--new code add here-->
+   <div id="dragme" draggable="true" ondragstart="drag(event)">Drag me</div>
+<div id="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)">Drop here</div>
+
+<h2>Canvas API</h2>
+<!-- added here canva code-->
+<canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;"></canvas>
+
+<!-- fullscreen API-->
+<h2>
+  fullscreen API
+</h2>
+
+<div id="myDiv" style="width: 300px; height: 200px; background-color: lightblue; text-align: center; padding-top: 80px;">
+    Click the button to go fullscreen
+  </div><br>
+  <button onclick="openFullscreen()">Go Fullscreen</button>
+<!--end code-->
+   
+
+  <script>
+    function getLocation() {
+      navigator.geolocation.getCurrentPosition(function(pos) {
+        document.getElementById("location").innerText =
+          "Lat: " + pos.coords.latitude + ", Long: " + pos.coords.longitude;
+      });
+    }
+
+    function saveData() {
+      localStorage.setItem("name", "NKTechVision");
+      document.getElementById("savedData").innerText = localStorage.getItem("name");
+    }
+    // new code it's name Drag and Drop API added here
+    function allowDrop(ev) {
+  ev.preventDefault();
+}
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}// new code ended here
+
+// added canva code here
+
+let canvas = document.getElementById("myCanvas");
+let ctx = canvas.getContext("2d");
+ctx.fillStyle = "red";
+ctx.fillRect(20, 20, 150, 50);
+
+// added here new js code it's name full screen api 
+
+function openFullscreen() {
+      const elem = document.getElementById("myDiv");
+
+      if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+      } else if (elem.webkitRequestFullscreen) { /* Safari */
+        elem.webkitRequestFullscreen();
+      } else if (elem.msRequestFullscreen) { /* IE11 */
+        elem.msRequestFullscreen();
+      }
+    }
+
+
+  </script>
+
+</body>
+</html>
+
+        </textarea>
+        <center>
+          <button onclick="runCode()">Run Code</button>
+        </center>
+        
+      </div>
+      <iframe id="output"></iframe>
+      <h2>Summary Table </h2>
+      <table border="1">
+        <tr>
+          <th>API Name </th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>Geolocation API</td>
+          <td>Get user's current location</td>
+        </tr>
+        <tr>
+          <td>Web Storage API</td>
+          <td>Store data in browser (local/session)</td>
+        </tr>
+        <tr>
+          <td>Drag & Drop API</td>
+          <td>Allow drag and drop of elements</td>
+        </tr>
+        <tr>
+          <td>Canvas API</td>
+          <td>Draw 2D graphics using JavaScript</td>
+        </tr>
+        <tr>
+          <td>Fullscreen API </td>
+          <td>Make any element fullscreen</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <!--add buttons here-->
+    <div class="btn">
+    <button type="button" onclick="GoToHome()">Go To Home</button>
+    <button type="button" onclick="chapter_12_HTML5_features()">Back</button>
+    <button type="button" onclick="chapter_14_accessibility_in_html()">Next</button>
+  </div>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="Html_Tutorial.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
