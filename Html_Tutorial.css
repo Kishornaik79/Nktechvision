@@ -70,6 +70,7 @@ textarea {
   font-size: 1rem;
   border:none;
   border-radius: 8px;
+  display: none;
 }
 
 button {
@@ -98,6 +99,7 @@ iframe {
   margin-top: 1rem;
   border: 1px solid #ccc;
   border-radius: 6px;
+  background: linear-gradient(to right, #d3cce3, #e9e4f0);
 }
 
 pre {
