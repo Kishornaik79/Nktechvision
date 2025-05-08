@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chapter 14 Accessibility in html </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="Html_Tutorial.css" type="text/css" media="all" />
+</head>
+
+<body>
+  <div class="my-header">
+    <h4>Chapter 14 :- Accessibility</h4>
+  </div>
+  <div class="main">
+    <div class="intro">
+      <h1>What is Accessibility ?</h1>
+      <hr>
+      <p><b>English :- </b> <b>Accessibility</b> means designing websites in a way that <b>everyone,</b> including <b>people with disabilities, </b> can <b>easily use and understand </b> them.</p>
+      
+      <p><b>Hindi :- </b> <b>Accessibility </b> का मतलब है वेबसाइट को इस तरह बनाना कि विकलांग (disabled) व्यक्ति भी उसे आसानी से पढ़ और समझ सके।</p>
+      
+      <h2>Why is Accessibility Important ?</h2>
+      
+      <ul class="my-ul">
+        <li>Better user experience for everyone
+          सभी यूज़र्स को अच्छा अनुभव मिलता है।</li>
+        <li>Legal Requirement in many countries
+          कई देशों में यह कानून से जरूरी होता है।</li>
+        <li>Helps with SEO (Search Engine Optimization)
+          गूगल आपकी वेबसाइट को बेहतर समझ पाता है।</li>
+      </ul>
+      
+      <h2>Key Features for html Accessibility</h2>
+      <hr>
+      <h2>1 Use Semantic html Tags</h2>
+      
+      <p>Semantic tags जैसे
+        <small><b>&lt;header&gt;</b></small>, <small><b>&lt;nav&gt;</b></small>, <small><b>&lt;main&gt;</b></small>, <small><b>&lt;footer&gt;</b></small> से स्क्रीन रीडर को साइट की संरचना समझने में मदद मिलती है।
+      </p>
+      <h3>Example:</h3>
+      <pre>
+        <code class="language-html">
+&lt;header&gt;  
+  &lt;h1&gt;Welcome to My Website&lt;/h1&gt;
+&lt;/header&gt;
+        </code>
+      </pre>
+      <h2>Alt Text Images</h2>
+      <p><b>alt attribute</b> screen readers को बताता है कि इमेज में क्या है।</p>
+      <pre>
+        <code class="language-html">
+&lt;img src="logo.png" alt="Company Logo"&gt;
+</code>
+</pre>
+      <p><b>English :- </b>Describes image for screen readers.</p>
+      <p><b>Hindi :- </b>स्क्रीन रीडर के लिए इमेज का वर्णन करता है।</p>
+      
+      </code>
+      </pre>
+      <h2>3 Label for Form Inputs</h2>
+      <p><b>Form controls</b> को पहचानने के लिए <small>&lt;label&gt;</small> जरूरी है।</p>
+      <pre>
+      <code class="language-html">
+&lt;label for="email"&gt;Email:&lt;/label&gt;
+&lt;input type="email" id="email" name="email"&gt;
+      </code>
+    </pre>
+      <p><b>English :- </b> Associates label with input.</p>
+      <p><b>Hindi :- </b>इनपुट फील्ड के साथ लेबल को जोड़ता है।</p>
+      <h2>4 Use ARIA Attributes</h2>
+      <p><b>ARIA </b> (Accessible Rich Internet Applications) attributes help when default html elements are not enough.</p>
+      <pre>
+      <code class="language-html">
+&lt;div role="alert"&gt;Form submission failed!&lt;/div&gt;
+      </code>
+    </pre>
+      <p><b>English :- </b> Screen readers will treat it as an alert.</p>
+      
+      <p><b>Hindi :- </b> स्क्रीन रीडर इसे चेतावनी के रूप में पढ़ेगा।</p>
+      
+      <h2>5 Keyboard Navigation Support</h2>
+      <p>सुनिश्चित करें कि यूज़र केवल कीबोर्ड से आपकी साइट पर नेविगेट कर सकें।</p>
+      <ul class="my-ul">
+        <li>Use <small>tabindex="0"</small> to make an element focusable.</li>
+        <li>Avoid removing <small>outline</small> in CSS.</li>
+      </ul>
+      
+      <h2>6 Use Proper Headings Heading Tags </h2>
+      <p>Headings structure (<small>&lt;h1&gt;</small> to <small>&lt;h6&gt;</small>)</p>
+      <pre>
+        <code class="language-html">
+&lt;h1&gt;Main Title&lt;/h2&gt;
+&lt;h2&gt;Sub Title&lt;/h2&gt;
+        </code>
+      </pre>
+      <h3>Complete Accessible Form Example</h3>
+      
+      <pre>
+   <code class="language-html">
+&lt;form&gt; &lt;!-- edid code from here--&gt;
+&lt;label for="name"&gt;Name:&lt;/label&gt;
+&lt;input type="text" id="name" name="name" required&gt;
+
+&lt;label for="email"&gt;Email:&lt;/label&gt;
+&lt;input type="email" id="email" name="email" required&gt;
+
+&lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+   </code>
+      </pre>
+      <h3>Example:</h3>
+      
+      <div class="code-area">
+        <textarea id="htmlCode">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Form Example</title>
+</head>
+<body>
+
+  <form> <!-- edid code from here-->
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <button type="submit">Submit</button>
+  </form>
+
+</body>
+</html>
+      </textarea>
+        <center>
+          <button onclick="runCode()">Run Code</button>
+        </center>
+      </div>
+      <iframe id="output"></iframe>
+      
+      <h2>Summary Table </h2>
+      <table border="1">
+        <tr>
+          <th>Technique</th>
+          <th>Purpose</th>
+        </tr>
+        <tr>
+          <td>Semantic Tags</td>
+          <td>Help screen readers understand layout</td>
+        </tr>
+        <tr>
+          <td>Alt Text for Images</td>
+          <td>Describe Visuals For visually impaired</td>
+        </tr>
+        <tr>
+          <td>Label with Inputs</td>
+          <td>Help users understand form fields</td>
+        </tr>
+        <tr>
+          <td>ARIA Roles and Attributes</td>
+          <td>Improve accessibility in custom elements</td>
+        </tr>
+        <tr>
+          <td>Keyboard Navigation</td>
+          <td>Let users use website without mouse</td>
+        </tr>
+      </table>
+      
+      <h2>Tools for Accessibility Testing</h2>
+      <ul class="my-ul">
+        <li>Lighthouse (Chrome DevTools)</li>
+        <li>WAVE by WebAIM</li>
+        <li>NVDA (Screen Reader for Windows)</li>
+      </ul>
+    </div>
+  </div>
+  <div class="btn">
+    <button type="button" onclick="GoToHome()">Go To Home</button>
+    <button type="button" onclick="chapter_13_HTML_apis()">Back</button>
+    <button type="button" onclick="chapter_15_HTML_best_practices()">Next</button>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="Html_Tutorial.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
